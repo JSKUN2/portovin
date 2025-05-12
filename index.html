@@ -81,14 +81,10 @@
         flex-direction: column;
         height: 100vh;
         background-color: #101010;
-        background-image: url("img/bawah.svg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
         justify-content: center;
         align-items: center;
     }
-        .gradient-mask {
+    .gradient-mask {
       position: absolute;
       top: 0;
       left: 0;
@@ -105,10 +101,32 @@
     .sec261{
         display: flex;
         flex-direction: column;
-        width: 85%;
+        width: 100%;
         color: white;
         margin-bottom: 15px;
-        margin-top: 10px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 30px;
+        background-image: url("img/bawah.svg");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        z-index: 2;
+    }
+    .sec261::after{
+        content: " ";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 200%;
+        z-index: 1;
+        background: 
+            radial-gradient(ellipse at center top, 
+            rgba(16,16,16,0) 0%, 
+            rgba(16,16,16,0) 49%, 
+            rgba(16,16,16,0.4) 50%, 
+            rgba(16,16,16,0.8) 100%);
+        background-color: rgba(16, 16, 16, 0.1) 0%, rgba(16, 16, 16, 0.5) 90%;
     }
     .sec261 h4{
         font-family: Inter;
@@ -117,6 +135,7 @@
         line-height: 100%;
         letter-spacing: 2%;
         margin-bottom: 10px;
+        z-index: 3;
     }
     .sec261 h5{
         font-family: Montserrat;
@@ -124,6 +143,7 @@
         font-size: 15px;
         line-height: 100%;
         letter-spacing: 2%;
+        z-index: 3;
     }
     .sec261 p{
         margin-top: 10px;
@@ -132,13 +152,15 @@
         font-size: 14px;
         line-height: 157%;
         letter-spacing: 12%;
+        z-index: 3;
     }
     .sec262 img{
-        height: 300px;
+        height: 400px;
         width: auto;
+        margin-top: 100px;
     }
     ul{
-        margin-top: 15px;
+        padding-top: 30px;
         font-family: Montserrat;
         font-weight: 500;
         font-size: 20px;
@@ -148,7 +170,10 @@
         display: flex;
         flex-direction: row;
         gap: 30px;
-
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #101010;
     }
     ul li{
         position: relative;
@@ -295,27 +320,27 @@
     <section class="sec1-1">
 
     </section>
-    <div class="sec2">
+    <div class="sec2 position-relative">
         <div class="gradient-mask"></div>
-        <div class="sec261">
-            <h4>About Me</h4>
+        <div class="sec261 position-absolute top-0 start-50 translate-middle-x">
+            <h4>About Me</h4><br><br>
             <h5>Hi There!,</h5>
             <p>I'm Glenndovin, I'm currently living in Medan Indonesia. I'm designer with a deep curiosity for UI/UX design. I started learning about it a year ago, and since then, I've been passionate about how design can improve the way people experience digital products. I believe good design is not just about looks-it's about making things intuitive and meaningful. <br><br> I mainly design using Figma, and I'm self-taught. I love turning ideas into interactive, user-friendly interfaces. I focus on visual clarity. storytelling through layout. Outside of UI/UX, I'm also Involved in game character design at a small indie studio, where I sharpen my creativity from a different angle.</p>
         </div>
         <div class="sec262">
-            <img src="img/peta.svg" alt="">
+            <img src="img/peta.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
         </div>
-        <ul>
-            <li>
-                <p>Curently, I am working in Indie Games Studio creating 2D base pixel game using Unity Engine. Still in progression.</p>
-            </li>
-            <li>
-                .
-            </li>
-            <li>
-                .
-            </li>
-        </ul>
     </div>
+    <ul>
+        <li>
+            <p>Curently, I am working in Indie Games Studio creating 2D base pixel game using Unity Engine. Still in progression.</p>
+        </li>
+        <li>
+            .
+        </li>
+        <li>
+            .
+        </li>
+    </ul>
 </body>
 </html>
