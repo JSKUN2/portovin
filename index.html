@@ -74,17 +74,23 @@
         margin-bottom: 190px;
         justify-self: flex-start
     }
-    .lokasi svg{
-        margin-left: 10px;
+    .lokasi-sub{
+        width: 100%;
+        height: 100%;
+        position: relative;
     }
-    .lokasi h5{
+    .lokasi-sub h5{
         font-family: Montserrat;
         font-weight: 500;
         font-size: 12.5px;
         line-height: 100%;
         letter-spacing: 2%;
-        margin-left: 10px;
         align-self: center;
+        width: 60%;
+        margin-left: 20px;
+    }
+    .lokasi-sub svg{
+        margin-left: 30px;
     }
     .sec1-1{
         width: 100%;
@@ -131,21 +137,6 @@
         background-position: top;
         background-repeat: no-repeat;
         z-index: 2;
-    }
-    .sec261::after{
-        content: " ";
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 200%;
-        z-index: 1;
-        background: 
-            radial-gradient(ellipse at center top, 
-            rgba(16,16,16,0) 0%, 
-            rgba(16,16,16,0) 49%, 
-            rgba(16,16,16,0.4) 50%, 
-            rgba(16,16,16,0.8) 100%);
-        background-color: rgba(16, 16, 16, 0.1) 0%, rgba(16, 16, 16, 0.5) 90%;
     }
     .sec261 h4{
         font-family: Inter;
@@ -286,12 +277,13 @@
         font-size: 52px;
         line-height: 100%;
         letter-spacing: 2%;        
-        background: radial-gradient(48.44% 187.46% at 50% 50%, #FFFFFF 57.39%, rgba(255, 255, 255, 0.4) 91.18%);
+        background: linear-gradient(90deg, #7e7f81 0%, #ffffff 50%, #7e7f81 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0px 4px 30px 0px #00000099;
+        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
         margin-bottom: 20px;
         z-index: 3;
+        width: 500px;
     }
     .movie-kiri{
         width: 50%;
@@ -303,7 +295,14 @@
         align-items: left;
     }
     .movie-kiri p{
-        color: radial-gradient(48.44% 187.46% at 50% 50%, #FFFFFF 57.39%, rgba(255, 255, 255, 0.4) 91.18%);
+        font-family: Montserrat;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        background: linear-gradient(90deg, #7e7f81, white, #7e7f81);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;        
         text-shadow: 0px 4px 30px 0px #00000099;
         width: 90%;
         z-index: 3;
@@ -311,19 +310,24 @@
     .movie-kiri img{
         margin-right: 56px;
     }
+    .nonaktif{
+        background: none;
+        background: linear-gradient(180deg, #2A2A2A 0%, #171A22 90.14%);
+    }
     </style>
 <body>
     <section class="sec1">
         <div class="tengah position-absolute top-50 start-50 translate-middle">
-            <img src="img/vinn-chan.png" alt="" class="position-absolute top-50 start-50 translate-middle">
             <h1>GLENNDOVIN</h1>    
         </div>
         <div class="lokasi position-absolute bottom-0 start-0">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M42 24C42 20.4399 40.9443 16.9598 38.9665 13.9997C36.9886 11.0397 34.1774 8.73255 30.8883 7.37018C27.5992 6.0078 23.98 5.65134 20.4884 6.34587C16.9967 7.04041 13.7894 8.75474 11.2721 11.2721C8.75474 13.7894 7.04041 16.9967 6.34587 20.4884C5.65134 23.98 6.0078 27.5992 7.37018 30.8883C8.73255 34.1774 11.0397 36.9886 13.9997 38.9665C16.9598 40.9443 20.4399 42 24 42M7.20001 18H40.8M7.20001 30H23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M23.0001 6C19.6308 11.3992 17.8445 17.6357 17.8445 24C17.8445 30.3643 19.6308 36.6008 23.0001 42M25.0001 6C28.233 11.1801 30.0113 17.1353 30.1481 23.24M40.4001 40.4L44.0001 44M30.0001 36C30.0001 37.5913 30.6322 39.1174 31.7574 40.2426C32.8826 41.3679 34.4088 42 36.0001 42C37.5914 42 39.1175 41.3679 40.2427 40.2426C41.3679 39.1174 42.0001 37.5913 42.0001 36C42.0001 34.4087 41.3679 32.8826 40.2427 31.7574C39.1175 30.6321 37.5914 30 36.0001 30C34.4088 30 32.8826 30.6321 31.7574 31.7574C30.6322 32.8826 30.0001 34.4087 30.0001 36Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            <h5>Locate in Medan, Indonesia</h5>
+            <div class="lokasi-sub">
+                <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 start-0 translate-middle">
+                    <path d="M42 24C42 20.4399 40.9443 16.9598 38.9665 13.9997C36.9886 11.0397 34.1774 8.73255 30.8883 7.37018C27.5992 6.0078 23.98 5.65134 20.4884 6.34587C16.9967 7.04041 13.7894 8.75474 11.2721 11.2721C8.75474 13.7894 7.04041 16.9967 6.34587 20.4884C5.65134 23.98 6.0078 27.5992 7.37018 30.8883C8.73255 34.1774 11.0397 36.9886 13.9997 38.9665C16.9598 40.9443 20.4399 42 24 42M7.20001 18H40.8M7.20001 30H23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.0001 6C19.6308 11.3992 17.8445 17.6357 17.8445 24C17.8445 30.3643 19.6308 36.6008 23.0001 42M25.0001 6C28.233 11.1801 30.0113 17.1353 30.1481 23.24M40.4001 40.4L44.0001 44M30.0001 36C30.0001 37.5913 30.6322 39.1174 31.7574 40.2426C32.8826 41.3679 34.4088 42 36.0001 42C37.5914 42 39.1175 41.3679 40.2427 40.2426C41.3679 39.1174 42.0001 37.5913 42.0001 36C42.0001 34.4087 41.3679 32.8826 40.2427 31.7574C39.1175 30.6321 37.5914 30 36.0001 30C34.4088 30 32.8826 30.6321 31.7574 31.7574C30.6322 32.8826 30.0001 34.4087 30.0001 36Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                <h5 class="position-absolute top-50 start-50 translate-middle">Locate in Medan, Indonesia</h5>
+            </div>
         </div>
     </section>
     <section class="sec1-1">
@@ -344,11 +348,9 @@
         <li>
             <p>Curently, I am working in Indie Games Studio creating 2D base pixel game using Unity Engine. Still in progression.</p>
         </li>
-        <li>
-            .
+        <li class="nonaktif">
         </li>
-        <li>
-            .
+        <li class="nonaktif">
         </li>
     </ul>
     <section class="sec3 position-relative">
