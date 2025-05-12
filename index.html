@@ -13,6 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika&display=swap" rel="stylesheet">
     <title>Glenndovin</title>
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 </head>
 <style>
     html{
@@ -22,6 +26,7 @@
         padding: 0;
         margin: 0;
         width: 100%;
+        overflow-x: hidden;
     }
     .sec1{
         display: flex;
@@ -37,20 +42,25 @@
     }
     .tengah{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-family: 'Fira Mono', monospace;
+        letter-spacing: -7px;
     }
     .tengah h1{
-        font-family: Montserrat;
         font-weight: 700;
         font-size: 150px;
         line-height: 100%;
-        letter-spacing: 2%;
         text-align: center;
-        background: url('img/Group\ 2.svg');
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: cover;
-
+        color: #efefef;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        animation: slide-up ease 4s;
     }
     .tengah img{
         width: 442;
@@ -59,6 +69,52 @@
         left: 739px;
         border-radius: 40px;
 
+    }
+    @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+    .partikel {
+    font-family: 'Fira Mono', monospace;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    animation: glitch 1s linear infinite;
+    border-bottom-right-radius: 240px;
+    }
+
+    .partikel::before,
+    .partikel::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    white-space: pre-line; /* penting untuk baris baru */
+    overflow: hidden;
+    z-index: -1;
+    }
+
+    .partikel::before {
+    color: #4b55b1;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    animation: glitchTop 1s linear infinite;
+    }
+
+    @keyframes glitchTop {
+    2%,64% { transform: translate(2px, -2px); }
+    4%,60% { transform: translate(-2px, 2px); }
+    62%    { transform: translate(13px, -1px) skew(-13deg); }
+    }
+
+    .partikel::after {
+    color: #4b55b1;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    animation: glitchBottom 1.5s linear infinite;
+    }
+
+    @keyframes glitchBottom {
+    2%,64% { transform: translate(-2px, 0); }
+    4%,60% { transform: translate(-2px, 0); }
+    62%    { transform: translate(-22px, 5px) skew(21deg); }
     }
     .lokasi{
         display: flex;
@@ -95,10 +151,23 @@
     .sec1-1{
         width: 100%;
         height: 300px;
-        background-image: url("img/Group\ 3.svg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1b1f26;
+    }
+    .sec1-1 h1{
+        font-family: Inter;
+        font-weight: 900;
+        font-size: 200px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        color: #e1e1e1;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: transform 0.3s ease;
     }
     .sec2{
         position: relative;
@@ -314,12 +383,44 @@
         background: none;
         background: linear-gradient(180deg, #2A2A2A 0%, #171A22 90.14%);
     }
+
+    @keyframes marquee {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+    .ppartikel{
+        position: relative;
+        width: inherit;
+        height: inherit;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-self: center;
+        justify-content: center;
+    }
+    .draggable{
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+        z-index: 4;
+        position: absolute;
+    }
     </style>
 <body>
     <section class="sec1">
         <div class="tengah position-absolute top-50 start-50 translate-middle">
-            <h1>GLENNDOVIN</h1>    
-        </div>
+            <div class="ppartikel">
+                <h1 class="partikel" data-text="GLENNDOVIN DHERREL JUNAIDY">
+                GLENNDOVIN<br>DHERREL<br>JUNAIDY
+                <img src="img/vinn-chancircle.png" alt="" class="draggable" id="draggable">
+                </h1>
+                
+            </div>
+          </div>          
         <div class="lokasi position-absolute bottom-0 start-0">
             <div class="lokasi-sub">
                 <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 start-0 translate-middle">
@@ -331,14 +432,14 @@
         </div>
     </section>
     <section class="sec1-1">
-
+        <h1  id="scrollText">UI/UX DESIGNER</h1>
     </section>
     <div class="sec2 position-relative">
         <div class="gradient-mask"></div>
         <div class="sec261 position-absolute top-0 start-50 translate-middle-x">
             <h4>About Me</h4><br><br>
             <h5>Hi There!,</h5>
-            <p>I'm Glenndovin, I'm currently living in Medan Indonesia. I'm designer with a deep curiosity for UI/UX design. I started learning about it a year ago, and since then, I've been passionate about how design can improve the way people experience digital products. I believe good design is not just about looks-it's about making things intuitive and meaningful. <br><br> I mainly design using Figma, and I'm self-taught. I love turning ideas into interactive, user-friendly interfaces. I focus on visual clarity. storytelling through layout. Outside of UI/UX, I'm also Involved in game character design at a small indie studio, where I sharpen my creativity from a different angle.</p>
+            <p>I'm Glenndovin, I'm currently living in Medan Indonesia. I'm designer with a deep curiosity for UI/UX design. I started learning about it a year ago, and since then, I've been passionate about how design can improve the way people experience digital products. I believe good design is not just about looks-it's about making things intuitive and meaningful. I mainly design using Figma, and I'm self-taught. I love turning ideas into interactive, user-friendly interfaces. I focus on visual clarity. storytelling through layout. Outside of UI/UX, I'm also Involved in game character design at a small indie studio, where I sharpen my creativity from a different angle.</p>
         </div>
         <div class="sec262">
             <img src="img/peta.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
@@ -369,5 +470,76 @@
             </div>
         </div>
     </section>
+    <script>
+    $(document).ready(function () {
+        $(function() {
+            centerElement();
+            
+            function centerElement() {
+                const $el = $('.draggable');
+                const $parent = $('.tengah');
+                
+                const parentWidth = $parent.width();
+                const parentHeight = $parent.height();
+                
+                const elWidth = $el.outerWidth();
+                const elHeight = $el.outerHeight();
+                
+                const centerX = (parentWidth - elWidth) / 2;
+                const centerY = (parentHeight - elHeight) / 2;
+                
+                $el.css({
+                    left: centerX,
+                    top: centerY
+                });
+            }
+            
+            $(".draggable").draggable({
+                containment: ".tengah",
+                revert: function() {
+                    centerElement();
+                    return false;
+                },
+                cursor: "move",
+                opacity: 0.7
+            });
+            
+            // Atur ulang posisi tengah saat window di-resize
+            $(window).resize(centerElement);
+        });
+
+        $('#scrollText').marquee({
+        duration: 10000,
+        gap: 50,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true,
+        pauseOnHover: false
+        });
+
+        let lastScrollTop = 0;
+        let scrollTimeout;
+
+        $(window).on('scroll', function () {
+        const currentScroll = $(this).scrollTop();
+        const $text = $('#scrollText');
+
+        if (currentScroll > lastScrollTop) {
+            $text.css('transform', 'skewX(10deg)');
+        } else {
+            $text.css('transform', 'skewX(-10deg)');
+        }
+
+        lastScrollTop = currentScroll;
+
+        clearTimeout(scrollTimeout);
+
+        scrollTimeout = setTimeout(function () {
+            $text.css('transform', 'skewX(0deg)');
+        }, 300);
+        });
+    });
+    </script>
+
 </body>
 </html>
