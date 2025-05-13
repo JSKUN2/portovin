@@ -17,417 +17,34 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="styleSheet" href="plugin/jquery.rollingBorder.css">
+    <script src="plugin/jquery.rollingBorder.js"></script>
+    <script src="plugin/jquery.flipping_text.js"></script>
+    <script src="plugin/jquery.magic.display.js"></script>
 </head>
-<style>
-    html{
-        background-color: #101010;
-    }
-    body{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        overflow-x: hidden;
-    }
-    .sec1{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        max-height: 100%;
-        background-color: #101010;
-        background-image: url("img/bg1.svg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .tengah{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        font-family: 'Fira Mono', monospace;
-        letter-spacing: -7px;
-    }
-    .tengah h1{
-        font-weight: 700;
-        font-size: 150px;
-        line-height: 100%;
-        text-align: center;
-        color: #efefef;
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        animation: slide-up ease 4s;
-    }
-    .tengah img{
-        width: 442;
-        height: 442;
-        top: 318px;
-        left: 739px;
-        border-radius: 40px;
-
-    }
-    @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
-
-    .partikel {
-    font-family: 'Fira Mono', monospace;
-    font-size: 3rem;
-    color: white;
-    position: relative;
-    animation: glitch 1s linear infinite;
-    border-bottom-right-radius: 228px;
-    border-bottom-left-radius: 228px;
-    }
-
-    .partikel::before,
-    .partikel::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    white-space: pre-line;
-    overflow: hidden;
-    z-index: -1;
-    }
-
-    .partikel::before {
-    color: #4b55b1;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    animation: glitchTop 1s linear infinite;
-    }
-
-    @keyframes glitchTop {
-    2%,64% { transform: translate(2px, -2px); }
-    4%,60% { transform: translate(-2px, 2px); }
-    62%    { transform: translate(13px, -1px) skew(-13deg); }
-    }
-
-    .partikel::after {
-    color: #4b55b1;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    animation: glitchBottom 1.5s linear infinite;
-    }
-
-    @keyframes glitchBottom {
-    2%,64% { transform: translate(-2px, 0); }
-    4%,60% { transform: translate(-2px, 0); }
-    62%    { transform: translate(-22px, 5px) skew(21deg); }
-    }
-    .lokasi{
-        display: flex;
-        flex-direction: row;
-        height: 50px;
-        width: 200px;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        background:linear-gradient(#232323, #151515);
-        border-top-right-radius: 200px;
-        border-bottom-right-radius: 200px;
-        margin-bottom: 190px;
-        justify-self: flex-start
-    }
-    .lokasi-sub{
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    .lokasi-sub h5{
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 12.5px;
-        line-height: 100%;
-        letter-spacing: 2%;
-        align-self: center;
-        width: 60%;
-        margin-left: 20px;
-    }
-    .lokasi-sub svg{
-        margin-left: 30px;
-    }
-    .sec1-1{
-        width: 100%;
-        height: 300px;
-        white-space: nowrap;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #1b1f26;
-    }
-    .sec1-1 h1{
-        font-family: Inter;
-        font-weight: 900;
-        font-size: 200px;
-        line-height: 100%;
-        letter-spacing: 2%;
-        color: #e1e1e1;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
-    .sec2{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        background-color: #101010;
-        justify-content: center;
-        align-items: center;
-    }
-    .gradient-mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background: linear-gradient(to right,
-        rgba(15, 15, 26, 1) 0%,
-        rgba(15, 15, 26, 0) 20%,
-        rgba(15, 15, 26, 0) 80%,
-        rgba(15, 15, 26, 1) 100% 
-      ); 
-    }
-    .sec261{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        color: white;
-        margin-bottom: 15px;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 30px;
-        background-image: url("img/bawah.svg");
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-        z-index: 2;
-    }
-    .sec261 h4{
-        font-family: Inter;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 2%;
-        margin-bottom: 10px;
-        z-index: 3;
-    }
-    .sec261 h5{
-        font-family: Montserrat;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 100%;
-        letter-spacing: 2%;
-        z-index: 3;
-    }
-    .sec261 p{
-        margin-top: 10px;
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 157%;
-        letter-spacing: 12%;
-        z-index: 3;
-    }
-    .sec262 img{
-        height: 56%;
-        width: auto;
-        margin-top: 100px;
-    }
-    ul{
-        padding-top: 30px;
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 157%;
-        letter-spacing: 12%;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
-        background-color: #101010;
-        margin-bottom: 0;
-    }
-    ul li{
-        position: relative;
-        background-image: url("img/card.svg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 400px;
-        height: 150px;
-        color: white;
-        padding: 40px;
-        padding-left: 30px;
-        padding-right: 30px;
-        line-height: 157%;
-        font-size: 15px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        z-index: 2;
-    }
-    ul li p{
-        position: relative;
-        z-index: 3;
-    }
-    ul li::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        background-image:
-            radial-gradient(circle at top right, rgba(0, 0, 0, 0.7), transparent 60%),
-            repeating-linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.05) 0px,
-            rgba(255, 255, 255, 0.01) 1px,
-            transparent 1px,
-            transparent 3px
-            ),
-            linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(255, 255, 255, 0.08));
-        backdrop-filter: blur(1px);
-        pointer-events: none;
-        border-radius: inherit;
-    }
-    .sec3{
-        width: 100vw;
-        height: 100vh;
-        background-color: #101010;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        padding-left: 6%;
-        padding-right: 6%;
-        padding-top: 2%;
-    }
-    .movie {
-        position: relative;
-        width: 88vw;
-        height: 77vh;
-        border-radius: 40px;
-        border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
-        border-image-slice: 1;
-        overflow: hidden;
-        z-index: 0;
-        background: linear-gradient(180deg, #2A2A2A 0%, #171A22 90.14%);
-        margin-top: 10px;
-    }
-
-    .movie::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("img/bgmovie.png");
-        background-size: cover;
-        background-position: center;
-        opacity: 0.2;
-        z-index: -1;
-    }
-    .sec3 h3{
-        font-family: Inter;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 100%;
-        letter-spacing: 2%
-    }
-    .movie-kiri h1 {
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 52px;
-        line-height: 100%;
-        letter-spacing: 2%;        
-        background: linear-gradient(90deg, #7e7f81 0%, #ffffff 50%, #7e7f81 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-        margin-bottom: 20px;
-        z-index: 3;
-        width: 500px;
-    }
-    .movie-kiri{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        padding: 56px;
-        justify-content: center;
-        align-items: left;
-    }
-    .movie-kiri p{
-        font-family: Montserrat;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 100%;
-        letter-spacing: 2%;
-        background: linear-gradient(90deg, #7e7f81, white, #7e7f81);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;        
-        text-shadow: 0px 4px 30px 0px #00000099;
-        width: 90%;
-        z-index: 3;
-    }
-    .movie-kiri img{
-        margin-right: 56px;
-    }
-    .nonaktif{
-        background: none;
-        background: linear-gradient(180deg, #2A2A2A 0%, #171A22 90.14%);
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-100%, 0);
-        }
-    }
-    .ppartikel{
-        position: relative;
-        width: inherit;
-        height: inherit;
-        display: flex;
-        align-self: center;
-        align-items: center;
-        justify-self: center;
-        justify-content: center;
-    }
-    .draggable{
-        width: 300px;
-        height: 300px;
-        cursor: pointer;
-        z-index: 4;
-        position: absolute;
-    }
-    </style>
 <body>
     <section class="sec1">
         <div class="tengah position-absolute top-50 start-50 translate-middle">
             <div class="ppartikel">
-                <h1 class="partikel" data-text="GLENNDOVIN DHERREL JUNAIDY">
-                GLENNDOVIN<br>DHERREL<br>JUNAIDY
+                <h1 class="partikel box-A magic-display magic-bottom">
+                    GLENNDOVIN
+                  </h1>
+                  <h1 class="partikel box-B magic-display magic-bottom">
+                    DHERREL
+                  </h1>
+                  <h1 class="partikel box-C magic-display magic-bottom">JUNAIDY</h1>
                 <img src="img/vinn-chancircle.png" alt="" class="draggable" id="draggable">
-                </h1>
-                
             </div>
           </div>          
         <div class="lokasi position-absolute bottom-0 start-0">
             <div class="lokasi-sub">
-                <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 start-0 translate-middle">
+                <!--<svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 start-0 translate-middle">
                     <path d="M42 24C42 20.4399 40.9443 16.9598 38.9665 13.9997C36.9886 11.0397 34.1774 8.73255 30.8883 7.37018C27.5992 6.0078 23.98 5.65134 20.4884 6.34587C16.9967 7.04041 13.7894 8.75474 11.2721 11.2721C8.75474 13.7894 7.04041 16.9967 6.34587 20.4884C5.65134 23.98 6.0078 27.5992 7.37018 30.8883C8.73255 34.1774 11.0397 36.9886 13.9997 38.9665C16.9598 40.9443 20.4399 42 24 42M7.20001 18H40.8M7.20001 30H23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M23.0001 6C19.6308 11.3992 17.8445 17.6357 17.8445 24C17.8445 30.3643 19.6308 36.6008 23.0001 42M25.0001 6C28.233 11.1801 30.0113 17.1353 30.1481 23.24M40.4001 40.4L44.0001 44M30.0001 36C30.0001 37.5913 30.6322 39.1174 31.7574 40.2426C32.8826 41.3679 34.4088 42 36.0001 42C37.5914 42 39.1175 41.3679 40.2427 40.2426C41.3679 39.1174 42.0001 37.5913 42.0001 36C42.0001 34.4087 41.3679 32.8826 40.2427 31.7574C39.1175 30.6321 37.5914 30 36.0001 30C34.4088 30 32.8826 30.6321 31.7574 31.7574C30.6322 32.8826 30.0001 34.4087 30.0001 36Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    </svg>-->
+
+                <img src="img/Location.gif" alt="" width="60" height="auto">
                 <h5 class="position-absolute top-50 start-50 translate-middle">Locate in Medan, Indonesia</h5>
             </div>
         </div>
@@ -437,29 +54,29 @@
     </section>
     <div class="sec2 position-relative">
         <div class="gradient-mask"></div>
-        <div class="sec261 position-absolute top-0 start-50 translate-middle-x">
-            <h4>About Me</h4><br><br>
-            <h5>Hi There!,</h5>
-            <p>I'm Glenndovin, I'm currently living in Medan Indonesia. I'm designer with a deep curiosity for UI/UX design. I started learning about it a year ago, and since then, I've been passionate about how design can improve the way people experience digital products. I believe good design is not just about looks-it's about making things intuitive and meaningful. I mainly design using Figma, and I'm self-taught. I love turning ideas into interactive, user-friendly interfaces. I focus on visual clarity. storytelling through layout. Outside of UI/UX, I'm also Involved in game character design at a small indie studio, where I sharpen my creativity from a different angle.</p>
-        </div>
+            <div class="sec261 position-absolute top-0 start-50 translate-middle-x">
+                <h4 class="psec1">About Me</h4><br><br>
+                <h5 class="psec2">Hi There!,</h5>
+                <p class="psec3">I'm Glenndovin, I'm currently living in Medan Indonesia. I'm designer with a deep curiosity for UI/UX design. I started learning about it a year ago, and since then, I've been passionate about how design can improve the way people experience digital products. I believe good design is not just about looks-it's about making things intuitive and meaningful. <br>I mainly design using Figma, and I'm self-taught. I love turning ideas into interactive, user-friendly interfaces. I focus on visual clarity. storytelling through layout. Outside of UI/UX, I'm also Involved in game character design at a small indie studio, where I sharpen my creativity from a different angle.</p>
+            </div>
         <div class="sec262">
             <img src="img/peta.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
         </div>
     </div>
     <ul>
-        <li>
+        <li class="box-A magic-display magic-left">
             <p>Curently, I am working in Indie Games Studio creating 2D base pixel game using Unity Engine. Still in progression.</p>
         </li>
-        <li class="nonaktif">
+        <li class="nonaktif box-B magic-display magic-bottom">
         </li>
-        <li class="nonaktif">
+        <li class="nonaktif box-C magic-display magic-right">
         </li>
     </ul>
     <section class="sec3 position-relative">
-        <h3>
+        <h3 class="partikel box-A magic-display magic-left">
             Recent Project
         </h3>
-        <div class="movie position-absolute top-50 start-50 translate-middle">
+        <div class="movie position-absolute top-50 start-50 translate-middle partikel box-B magic-display magic-bottom">
             <div class="movie-kiri">
                 <h1>
                     Movie App
@@ -473,6 +90,11 @@
     </section>
     <script>
     $(document).ready(function () {
+        $('.magic-display').magicDisplay();
+        $(".psec1").hide();
+        $(".psec2").hide();
+        $(".psec3").hide();
+
         $(function() {
             centerElement();
             
@@ -507,7 +129,20 @@
             
             $(window).resize(centerElement);
         });
-
+        function text(a){
+            if(a==1){
+                for (var x = 1; x <= 3; x++){
+                    $(".psec"+String(x)).show();
+                    $(".psec"+String(x)).flipping_text({
+                        tickerTime: 5, 
+                        customRandomChar: false, 
+                        tickerCount: 7, 
+                        opacityEffect: true,
+                        resetOnChange: false
+                    });
+                }
+            }
+        }
         $('#scrollText').marquee({
         duration: 10000,
         gap: 50,
@@ -516,10 +151,20 @@
         duplicated: true,
         pauseOnHover: false
         });
-
+        let a = 0
         let lastScrollTop = 0;
         let scrollTimeout;
-
+        $(".sec2").hover(function () {
+                if(a==0){
+                a = 1
+                text(a)}
+                else{
+                    pass
+                }
+            }, function(){
+                pass
+            }
+        );
         $(window).on('scroll', function () {
         const currentScroll = $(this).scrollTop();
         const $text = $('#scrollText');
