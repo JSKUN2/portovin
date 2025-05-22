@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika&display=swap');
+
 html{
     background-color: #101010;
 }
@@ -49,7 +51,7 @@ body{
     top: 318px;
     left: 739px;
     border-radius: 40px;
-    box-shadow: 0 0 93px 93px #FFFFFF;
+    box-shadow: 0 0 93px 93px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(500px);
     -webkit-backdrop-filter: blur(500px);
 }
@@ -171,9 +173,12 @@ body{
     z-index: 3;
 }
 .sec262 img{
-    height: auto;
-    width: 78%;
-    margin-top: 150px;
+    position: fixed;
+    height: 300vh;
+    width: auto;
+    object-fit: contain;
+    aspect-ratio: 9/16;
+    margin-top: 200px;
 }
 ul.marquee-container {
     padding-top: 30px;
@@ -187,7 +192,7 @@ ul.marquee-container {
 }
 
 ul{
-    padding-top: 30px;
+    padding-top: 200px;
     font-family: Montserrat;
     font-weight: 500;
     font-size: 20px;
@@ -229,7 +234,7 @@ ul li{
     font-size: 90px;
     line-height: 100%;
     letter-spacing: 2%;
-    text-align: center;
+    text-align: left;
 
 }
 ul li p{
