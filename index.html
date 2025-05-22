@@ -84,17 +84,13 @@
                 <p>
                     This app concept was designed to make discovering and tracking movies more fun and intuitive. The goal was to create a clean and interactive UI that feels smooth and modern, while still being user-friendly for everyday use.
                 </p>
-                <img src="img/movie.svg" alt="" class="position-absolute top-50 end-0 translate-middle-y" width="50%" height="auto">
+                <img src="img/movie.png" alt="" class="position-absolute top-50 end-0 translate-middle-y" width="50%" height="auto">
             </div>
         </div>
     </section>
     <script>
     $(document).ready(function () {
         $('.magic-display').magicDisplay();
-        $(".psec1").hide();
-        $(".psec2").hide();
-        $(".psec3").hide();
-        $(".psec4").hide();
 
         $(function() {
             centerElement();
@@ -155,17 +151,6 @@
         let a = 0
         let lastScrollTop = 0;
         let scrollTimeout;
-        $(".sec2").hover(function () {
-                if(a==0){
-                a = 1
-                text(a)}
-                else{
-                    pass
-                }
-            }, function(){
-                pass
-            }
-        );
         $(window).on('scroll', function () {
         const currentScroll = $(this).scrollTop();
         const $text = $('#scrollText');

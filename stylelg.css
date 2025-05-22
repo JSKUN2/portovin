@@ -32,7 +32,9 @@ body{
     font-size: 150px;
     line-height: 100%;
     text-align: center;
-    color: #3776ff;
+    background: linear-gradient(270deg, #FFFFFF -11.51%, #4A95FF 53.14%, #FFFFFF 117.79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -47,9 +49,11 @@ body{
     top: 318px;
     left: 739px;
     border-radius: 40px;
-
+    box-shadow: 0 0 93px 93px rgba(55, 118, 255, 0.5);
+    backdrop-filter: blur(500px);
+    -webkit-backdrop-filter: blur(500px);
 }
-  
+
 .lokasi{
     display: flex;
     flex-direction: row;
@@ -89,6 +93,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFF9F8;
     background: linear-gradient(90deg, #8EB2FF 0%, #3776FF 100%);
 }
 .sec1-1 h1{
@@ -155,9 +160,9 @@ body{
     z-index: 3;
 }
 .sec262 img{
-    height: 56%;
-    width: auto;
-    margin-top: 100px;
+    height: auto;
+    width: 78%;
+    margin-top: 150px;
 }
 ul.marquee-container {
     padding-top: 30px;
@@ -275,7 +280,6 @@ ul li::after {
     background: linear-gradient(to right,#0048E5 0%,#568BFF 30%,#0048E5 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     z-index: 3;
     width: 500px;
@@ -306,10 +310,12 @@ ul li::after {
     margin-right: 56px;
 }
 .nonaktif{
-    background: none;
     background: linear-gradient(180deg, rgba(221, 224, 255, 0.5) 0%, rgba(186, 209, 255, 0.5) 90.14%);
 }
+.nonaktif::after{
+    background-image: none;
 
+}
 @keyframes marquee {
     0% {
         transform: translate(0, 0);
@@ -360,5 +366,37 @@ ul li::after {
     stroke-dasharray: 760;
 }
 .psec1{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 2%;
     color: #0048E5;
+}
+.psec2{
+    color: #0048E5;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 2%;
+
+}
+.psec3{
+    color: #0048E5;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 157%;
+    letter-spacing: 12%;
+    
+}
+.psec4{
+    color: #0048E5;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 157%;
+    letter-spacing: 12%;
+    
 }

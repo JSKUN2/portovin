@@ -32,8 +32,10 @@ body{
     font-size: 150px;
     line-height: 100%;
     text-align: center;
-    color: #efefef;
     display: flex;
+    background: linear-gradient(90deg, #979797 0%, #FFFFFF 50%, #979797 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     flex-direction: row;
     overflow: hidden;
     text-align: center;
@@ -47,9 +49,10 @@ body{
     top: 318px;
     left: 739px;
     border-radius: 40px;
-
+    box-shadow: 0 0 93px 93px #FFFFFF;
+    backdrop-filter: blur(500px);
+    -webkit-backdrop-filter: blur(500px);
 }
-  
 .lokasi{
     display: flex;
     flex-direction: row;
@@ -168,9 +171,9 @@ body{
     z-index: 3;
 }
 .sec262 img{
-    height: 56%;
-    width: auto;
-    margin-top: 100px;
+    height: auto;
+    width: 78%;
+    margin-top: 150px;
 }
 ul.marquee-container {
     padding-top: 30px;
@@ -383,4 +386,39 @@ ul li::after {
     stroke-width: 2px;
     stroke-dashoffset: 0;
     stroke-dasharray: 760;
+}
+.psec1{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+}
+.psec2{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 2%;
+
+}
+.psec3{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 157%;
+    letter-spacing: 12%;
+    
+}
+.psec4{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 157%;
+    letter-spacing: 12%;
+    
 }
