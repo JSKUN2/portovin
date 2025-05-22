@@ -51,7 +51,7 @@ body{
     top: 318px;
     left: 739px;
     border-radius: 40px;
-    box-shadow: 0 0 93px 93px rgba(55, 118, 255, 0.25);
+    box-shadow: 0 0 2000vw rgba(55, 118, 255, 1);
     backdrop-filter: blur(500px);
     -webkit-backdrop-filter: blur(500px);
 }
