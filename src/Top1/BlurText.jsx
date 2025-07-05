@@ -5,7 +5,7 @@ export default function BlurText({
   text,
   delay = 0,
   animateBy = 'letters',
-  direction = 'top', 
+  direction = 'top',
   className = '',
 }) {
   const parts = animateBy === 'words' ? text.split(' ') : text.split('');
@@ -17,9 +17,8 @@ export default function BlurText({
     right: { y: 0, x: -30 },
   };
 
-  // Detect if the browser is Chrome
   const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  const initialBlur = isChrome ? 'blur(4px)' : 'blur(10px)'; // Reduced blur for Chrome
+  const initialBlur = isChrome ? 'blur(4px)' : 'blur(10px)';
 
   return (
     <div className={`flex flex-wrap justify-center ${className}`}>
@@ -30,7 +29,7 @@ export default function BlurText({
             opacity: 0,
             filter: initialBlur,
             ...directionOffset[direction],
-            translateZ: 0, // Force hardware acceleration
+            translateZ: 0,
           }}
           whileInView={{
             opacity: 1,
@@ -43,11 +42,12 @@ export default function BlurText({
             delay: delay / 1000 + idx * 0.08,
             ease: 'easeOut',
           }}
-          viewport={{ once: false, amount: 0.5 }} 
-          className="inline-block"
+          viewport={{ once: false, amount: 0.5 }}
+          className="inline-block min-w-[1ch] text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300"
           style={{
-            willChange: 'opacity, filter, transform', // Optimize for performance
-            backfaceVisibility: 'hidden', // Prevent flickering
+            willChange: 'opacity, filter, transform',
+            backfaceVisibility: 'hidden',
+            WebkitFontSmoothing: 'antialiased',
           }}
         >
           {char}
