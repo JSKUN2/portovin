@@ -4,8 +4,7 @@ import TiltedCard from './TiltedCard';
 import foto from '../assets/img/foto.webp';
 import '../index.css';
 import './top1.css';
-import Texture from '../assets/img/texture2.svg'
-import Texture2 from '../assets/img/texture3.svg'
+
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
 };
@@ -15,7 +14,6 @@ const useCustomArray = () => {
     300,
     "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4 text-[120px] leading-[100%] tracking-[2%] h-[140px]",
     "h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
-    Texture2,
   ]);
 
   useEffect(() => {
@@ -26,14 +24,12 @@ const useCustomArray = () => {
           "40vw",
           "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-0.5 text-[12vw] leading-[100%] tracking-[2%]",
           "h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
-          Texture,
         ]);
       } else {
         setData([
           300,
           "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4 text-[120px] leading-[100%] tracking-[2%] h-[140px]",
           "h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
-          Texture2,
         ]);
       }
     };
@@ -48,10 +44,10 @@ const useCustomArray = () => {
 };
 
 export default function Top1() {
-  const [size, Class, Class2, Texture] = useCustomArray();
+  const [size, Class, Class2] = useCustomArray();
 
   return (
-    <div className="relative w-screen h-screen bg-white flex justify-center items-center font-montserrat" style={{ backgroundImage: `url(${Texture})`, backgroundRepeat: 'no-repeat', backgroundSize: "cover", backgroundPosition:'center' }}>
+    <div className="relative w-screen h-screen bg-white flex justify-center items-center font-montserrat"}}>
       <div className="absolute inset-0 z-0 flex flex-col justify-center items-center text-center">
         {["GLENNDOVIN", "DHERREL", "JUNAIDY"].map((word, idx) => (
           <BlurText
