@@ -21,11 +21,10 @@ export default function Middle(){
     return(<>
       {Mobile ? (
         <div className="w-screen overflow-x-hidden relative">
-        <div className="flex flex-row gap-[12px] translate-x-[-66.5%]">
-            <SpotlightCard className="custom-spotlight-card w-[240px] h-[131px] shrink-0 passive" spotlightColor="#BAD1FF" />
+        <div className="flex flex-row gap-[12px] translate-x-[-180px]">
+            <SpotlightCard className="custom-spotlight-card w-[240px] h-[121px] shrink-0 passive" spotlightColor="#BAD1FF" />
             
-            <SpotlightCard className="custom-spotlight-card w-[240px] h-[131px] shrink-0 active text-[12px] leading-[157%] tracking-[12%] text-[#FFF9F8] align-center justify-center" spotlightColor="#BAD1FF">
-            <br />
+            <SpotlightCard className="custom-spotlight-card w-[240px] h-[121px] shrink-0 active text-[12px] leading-[157%] tracking-[12%] text-[#FFF9F8] align-center justify-center" spotlightColor="#BAD1FF">
             Currently working at Grooth Studio, developing a 2D pixel-based game with Unity Engine. Project still in progress.
             </SpotlightCard>
             

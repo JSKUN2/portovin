@@ -5,6 +5,7 @@ import foto from '../assets/img/foto.webp';
 import '../index.css';
 import './top1.css';
 import Texture from '../assets/img/texture2.svg'
+import Texture2 from '../assets/img/texture3.svg'
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
 };
@@ -14,7 +15,7 @@ const useCustomArray = () => {
     300,
     "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4 text-[120px] leading-[100%] tracking-[2%] h-[140px]",
     "h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
-    null,
+    Texture2,
   ]);
 
   useEffect(() => {
@@ -22,8 +23,8 @@ const useCustomArray = () => {
       const w = window.innerWidth;
       if (w < 768) {
         setData([
-          120,
-          "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-0.5 text-[40px] leading-[100%] tracking-[2%] h-[50px]",
+          "40vw",
+          "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-0.5 text-[12vw] leading-[100%] tracking-[2%]",
           "h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
           Texture,
         ]);
@@ -32,7 +33,7 @@ const useCustomArray = () => {
           300,
           "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4 text-[120px] leading-[100%] tracking-[2%] h-[140px]",
           "h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
-          null,
+          Texture2,
         ]);
       }
     };
