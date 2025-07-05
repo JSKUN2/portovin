@@ -1,7 +1,6 @@
 import React from 'react';
 import ScrollVelocity from './ScrollVelocity.jsx';
 import ScrollReveal from './ScrollReveal.jsx';
-import ScrollReveal2 from './ScrollReveal2.jsx';
 import '../index.css'
 export default function Top2() {
     return(
@@ -14,7 +13,7 @@ export default function Top2() {
                 />
             </div>
             <div className="relative w-screen h-screen bg-white flex justify-center items-center flex-col">
-                <ScrollReveal2
+                <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
                     baseRotation={4}
@@ -22,7 +21,7 @@ export default function Top2() {
                     textClassName='text-[clamp(1.6rem,4vw,48px)] leading-[157%] text-center w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-10 font-bold'
                 >
                     About Me
-                </ScrollReveal2>
+                </ScrollReveal>
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
