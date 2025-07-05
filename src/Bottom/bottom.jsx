@@ -12,7 +12,7 @@ export default function Bottom() {
                     enableBlur={true}
                     baseRotation={4}
                     blurStrength={9}
-                    textClassName='text-[clamp(1.6rem,4vw,48px)] leading-[157%] text-center font-[700] w-[80vw] [word-spacing:0.4em] tracking-[12%] mt-[170px] mb-[100px] '
+                    textClassName='text-[clamp(1.6rem,4vw,48px)] leading-[157%] text-center font-[700] w-[80vw] [word-spacing:0.4em] tracking-[12%] mt-[170px] mb-[100px] font-bold'
                 >
                     Recent Project
                 </ScrollReveal>
