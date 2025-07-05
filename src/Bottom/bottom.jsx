@@ -53,7 +53,7 @@ export default function Bottom() {
     const [Class, Class2, Class3, Class4, Class5, Class6] = useCustomArray()
     return(
         <>
-            <div className="relative w-screen h-[240vh] bg-white flex items-center flex-col font-montserrat">
+            <div className="relative w-screen h-[220vh] bg-white flex items-center flex-col font-montserrat">
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
