@@ -47,7 +47,7 @@ export default function Top1() {
   const [size, Class, Class2] = useCustomArray();
 
   return (
-    <div className="relative w-screen h-screen bg-white flex justify-center items-center font-montserrat"}}>
+    <div className="relative w-screen h-screen bg-white flex justify-center items-center font-montserrat">
       <div className="absolute inset-0 z-0 flex flex-col justify-center items-center text-center">
         {["GLENNDOVIN", "DHERREL", "JUNAIDY"].map((word, idx) => (
           <BlurText
