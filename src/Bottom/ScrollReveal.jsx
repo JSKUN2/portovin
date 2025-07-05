@@ -69,7 +69,7 @@ const ScrollReveal = ({
       {
         ease: "none",
         opacity: 1,
-        color: "#0048E5",
+        color: "#427EFF",
         stagger: 0.05,
         scrollTrigger: {
           trigger: el,
