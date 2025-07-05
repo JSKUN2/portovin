@@ -1,0 +1,15 @@
+.passive{
+    background: linear-gradient(90deg, rgba(221, 224, 255, 0.5) 0%, rgba(186, 209, 255, 0.5) 90.14%);
+
+}
+.active{
+    background-image: 
+        url('../assets/img/texture-rotated.png'),
+        linear-gradient(100.48deg, #D3E1FF 1.69%, #427EFF 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
