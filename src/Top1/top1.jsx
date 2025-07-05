@@ -36,7 +36,6 @@ export default function Top1() {
       <div className="z-20">
         <TiltedCard
           imageSrc={foto}
-          altText="Glenndovin Dherrel Junaidy"
           captionText="Glenndovin Dherrel Junaidy"
           containerHeight="300px"
           containerWidth="300px"
