@@ -4,7 +4,7 @@
 }
 .active{
     background-image: 
-        url('../assets/img/texture-rotated.png'),
+        url('../assets/img/texture-rotated.webp'),
         linear-gradient(100.48deg, #D3E1FF 1.69%, #427EFF 100%);
     background-repeat: no-repeat;
     background-size: cover;
