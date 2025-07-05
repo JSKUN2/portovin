@@ -27,7 +27,7 @@ export default function Top2() {
                     enableBlur={true}
                     baseRotation={4}
                     blurStrength={9}
-                    textClassName='text-[clamp(1.6rem,4vw,32px)] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold'
+                    textClassName='text-[clamp(1.6rem,4vw,32px)] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-medium'
                 >
                     I’m Glenndovin, I'm a designer with a deep curiosity for UI/UX design.
                     I mainly design using Figma, and I'm self-taught.
