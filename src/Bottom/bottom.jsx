@@ -1,6 +1,5 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal.jsx';
-import Magnet from './Magnet'
 import FadeContent from './FadeContent'
 import '../index.css'
 export default function Bottom() {
@@ -17,8 +16,6 @@ export default function Bottom() {
                     Recent Project
                 </ScrollReveal>
                 <div className='flex flex-col gap-[110px]'>
-
-                <Magnet padding={100} disabled={false} magnetStrength={4}>
                         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className='text-[black]'>
                             <div className='h-[77vh] w-[77vw] bg-[#BCD3FF] rounded-[30px] flex'>
                             <div className='flex-1 flex justify-center pl-[10%] flex flex-col w-[50%]'>
@@ -33,8 +30,6 @@ export default function Bottom() {
                             </div>
                             </div>
                         </FadeContent>
-                </Magnet>
-                <Magnet padding={200} disabled={false} magnetStrength={5}>
                         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className='text-[black]'>
                             <div className='h-[77vh] w-[77vw] bg-[#BCD3FF] rounded-[30px] flex'>
                             <div className='flex-1 flex justify-center pl-[10%] flex flex-col w-[50%]'>
@@ -49,7 +44,6 @@ export default function Bottom() {
                             </div>
                             </div>
                         </FadeContent>
-                </Magnet>
                 </div>
             </div>
         </>
