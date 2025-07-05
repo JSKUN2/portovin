@@ -11,7 +11,7 @@ const useCustomArray = () => {
     "flex-1 flex justify-center pl-[10%] flex flex-col w-[50%]",
     "inline-block font-[500] text-transparent bg-clip-text bg-[linear-gradient(90deg,_#0048E5_1%,_#568BFF_30%,_#0048E5_70%)] font-(family-name:montserrat) text-[54px] leading-[100%] tracking-[2%] text-left mb-[20px] w-[80%] h-[70px]",
     "inline-block font-[300] text-transparent bg-clip-text bg-[linear-gradient(18deg,_#0048E5_50%,_#568BFF_100%)] font-(family-name:montserrat) text-[18px] leading-[100%] tracking-[2%] text-justify w-[80%]",
-    "flex-1 w-[50%] bg-[url(/img/project2.webp)] bg-cover bg-no-repeat bg-center",
+    "flex-1 w-[50%]",
     "flex-1 w-[50%]"
   ]);
 
@@ -25,7 +25,7 @@ const useCustomArray = () => {
             "flex-1 flex flex-justify-center align-center flex flex-col w-[100%] pl-[10%] mt-[40px]",
             "inline-block text-transparent bg-clip-text bg-[linear-gradient(90deg,_#0048E5_1%,_#568BFF_30%,_#0048E5_70%)] font-(family-name:montserrat) text-[32px] leading-[100%] tracking-[2%] text-left mb-[12px] w-[80%] h-[36px]",
             "inline-block font-[300] text-transparent bg-clip-text bg-[linear-gradient(18deg,_#0048E5_50%,_#568BFF_100%)] font-(family-name:montserrat) text-[12px] leading-[100%] tracking-[2%] text-justify w-[90%] text-light",
-            "flex-1 w-[100%] bg-[url(/img/project2.webp)] bg-cover bg-no-repeat bg-center",
+            "flex-1 w-[100%]",
             "flex-1 w-[100%]"
         ]);
       } else {
@@ -35,7 +35,7 @@ const useCustomArray = () => {
             "flex-1 flex justify-center pl-[10%] flex flex-col w-[50%]",
             "inline-block font-[500] text-transparent bg-clip-text bg-[linear-gradient(90deg,_#0048E5_1%,_#568BFF_30%,_#0048E5_70%)] font-(family-name:montserrat) text-[54px] leading-[100%] tracking-[2%] text-left mb-[20px] w-[80%] h-[70px]",
             "inline-block font-[300] text-transparent bg-clip-text bg-[linear-gradient(18deg,_#0048E5_50%,_#568BFF_100%)] font-(family-name:montserrat) text-[18px] leading-[100%] tracking-[2%] text-justify w-[80%]",
-            "flex-1 w-[50%] bg-[url(/img/project2.webp)] bg-cover bg-no-repeat bg-center",
+            "flex-1 w-[50%]",
             "flex-1 w-[50%]"
         ]);
       }
