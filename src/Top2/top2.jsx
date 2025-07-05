@@ -9,7 +9,7 @@ export default function Top2() {
                 <ScrollVelocity
                     texts={['UI/UX DESIGNER']} 
                     velocity={70} 
-                    className="custom-scroll-text font-inter font-extrabold italic text-[220px] leading-[100%] tracking-[2%]"
+                    className="custom-scroll-text font-inter font-extrabold text-[220px] leading-[100%] tracking-[2%]"
                 />
             </div>
             <div className="relative w-screen h-screen bg-white flex justify-center items-center flex-col">
@@ -18,7 +18,7 @@ export default function Top2() {
                     enableBlur={true}
                     baseRotation={4}
                     blurStrength={9}
-                    textClassName='text-[clamp(1.6rem,4vw,48px)] leading-[157%] text-center font-[700] w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-10 font-bold'
+                    textClassName='text-[clamp(1.6rem,4vw,48px)] leading-[157%] text-center w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-10 font-bold'
                 >
                     About Me
                 </ScrollReveal>
@@ -27,7 +27,7 @@ export default function Top2() {
                     enableBlur={true}
                     baseRotation={4}
                     blurStrength={9}
-                    textClassName='text-[clamp(1.6rem,4vw,32px)] leading-[157%] text-justify font-normal w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold'
+                    textClassName='text-[clamp(1.6rem,4vw,32px)] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold'
                 >
                     I’m Glenndovin, I'm a designer with a deep curiosity for UI/UX design.
                     I mainly design using Figma, and I'm self-taught.
