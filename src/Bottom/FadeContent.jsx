@@ -19,18 +19,22 @@ const FadeContent = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          observer.unobserve(ref.current);
           setTimeout(() => {
             setInView(true);
           }, delay);
+        } else {
+          // Reset agar animasi bisa muncul ulang saat scroll
+          setInView(false);
         }
       },
-      { threshold },
+      { threshold }
     );
 
     observer.observe(ref.current);
 
-    return () => observer.disconnect();
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
   }, [threshold, delay]);
 
   return (
@@ -39,7 +43,8 @@ const FadeContent = ({
       className={className}
       style={{
         opacity: inView ? 1 : initialOpacity,
-        transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
+        transform: inView ? "translateY(0px)" : "translateY(20px)",
+        transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}, transform ${duration}ms ${easing}`,
         filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
       }}
     >
