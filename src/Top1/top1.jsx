@@ -1,7 +1,7 @@
 import React from 'react';
 import BlurText from "./BlurText.jsx";
 import TiltedCard from './TiltedCard';
-import foto from '../assets/img/foto.png';
+import foto from '../assets/img/foto.webp';
 import '../index.css'
 import './top1.css';
 
