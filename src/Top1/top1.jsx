@@ -1,18 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import BlurText from "./BlurText.jsx";
 import TiltedCard from './TiltedCard';
 import foto from '../assets/img/foto.webp';
-import '../index.css'
+import '../index.css';
 import './top1.css';
-
+import Texture from '../assets/img/texture2.svg'
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
 };
 
-export default function Top1() {
-  return (
-    <div className="relative w-screen h-screen bg-white flex justify-center items-center font-montserrat">
+const useCustomArray = () => {
+  const [data, setData] = useState([
+    300,
+    "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4 text-[120px] leading-[100%] tracking-[2%] h-[140px]",
+    "h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
+    null,
+  ]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const w = window.innerWidth;
+      if (w < 768) {
+        setData([
+          120,
+          "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-0.5 text-[40px] leading-[100%] tracking-[2%] h-[50px]",
+          "h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
+          Texture,
+        ]);
+      } else {
+        setData([
+          300,
+          "font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4 text-[120px] leading-[100%] tracking-[2%] h-[140px]",
+          "h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]",
+          null,
+        ]);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return data;
+};
+
+export default function Top1() {
+  const [size, Class, Class2, Texture] = useCustomArray();
+
+  return (
+    <div className="relative w-screen h-screen bg-white flex justify-center items-center font-montserrat" style={{ backgroundImage: `url(${Texture})`, backgroundRepeat: 'no-repeat', backgroundSize: "cover", backgroundPosition:'center' }}>
       <div className="absolute inset-0 z-0 flex flex-col justify-center items-center text-center">
         {["GLENNDOVIN", "DHERREL", "JUNAIDY"].map((word, idx) => (
           <BlurText
@@ -22,15 +60,15 @@ export default function Top1() {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,_white_0%,_#4A95FF_10%,_#4A95FF_90%,_white_100%)] mb-4  text-[120px] leading-[100%] tracking-[2%] h-[140px]"
+            className={Class}
           />
         ))}
       </div>
 
       <div className="absolute inset-0 z-10 flex justify-center items-center">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,#3776FF90_0%,transparent_74%)] blur-[100px]"></div>
-            </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className={Class2} />
+        </div>
       </div>
 
       <div className="z-20">
@@ -38,21 +76,18 @@ export default function Top1() {
           imageSrc={foto}
           altText=" "
           captionText="Glenndovin Dherrel Junaidy"
-          containerHeight="300px"
-          containerWidth="300px"
-          imageHeight="300px"
-          imageWidth="300px"
+          containerHeight={size}
+          containerWidth={size}
+          imageHeight={size}
+          imageWidth={size}
           rotateAmplitude={12}
           scaleOnHover={1.2}
           showMobileWarning={false}
           showTooltip={true}
           displayOverlayContent={false}
-          overlayContent={
-            <p className="tilted-card-demo-text">glenndovin</p>
-          }
+          overlayContent={<p className="tilted-card-demo-text">glenndovin</p>}
         />
       </div>
-
     </div>
   );
 }
