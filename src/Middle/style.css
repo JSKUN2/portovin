@@ -1,6 +1,6 @@
 .passive{
-    background: linear-gradient(90deg, rgba(221, 224, 255, 0.5) 0%, rgba(186, 209, 255, 0.5) 90.14%);
-
+    border: 1.4px solid;
+    border-image-source: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
 .active{
     background: linear-gradient(107.48deg, #5D90FD 15.05%, #8AB0FF 95.82%);
