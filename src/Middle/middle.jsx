@@ -58,7 +58,7 @@ export default function Middle() {
                   <>
                     <div className="flex flex-row items-center mb-2">
                       <img src={item.icon} alt="" width="70px" height="70px" />
-                      <p className="ml-3 font-montserrat font-bold text-[26px] leading-[157%] tracking-[0%]">
+                      <p className="ml-3 font-montserrat font-bold text-[26px] leading-[157%] tracking-[0%] max-md:text-[20px]">
                         {item.title}
                       </p>
                     </div>
