@@ -76,7 +76,6 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 50px;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
