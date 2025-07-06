@@ -20,28 +20,35 @@ const useMobile = (breakpoint = 768) => {
 export default function Middle() {
   const Mobile = useMobile();
 
+  useEffect(() => {
+    const container = document.querySelector(".scroll-list");
+    if (container) {
+      container.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+  }, []);
+
   const spotlightItems = [
-        {
-          type: 'active',
-          title: 'Grooth Studio',
-          description:
-            'I work on responsive web layouts and intuitive UI/UX, collaborating with the team to maintain a clear and consistent design style.',
-          role: 'Website & UI/UX Design',
-          icon: Grooth
-        },
-        {
-          type: 'active',
-          title: 'Grooth Studio',
-          description:
-            'I design and animate characters, from concept to final assets, ensuring they match the visual tone and feel of the game.',
-          role: 'Character Design & Animation',
-          icon: Grooth
-        },
-        { type: 'passive' },
-        { type: 'passive' },
-        { type: 'passive' },
-        { type: 'passive' },
-      ];
+    {
+      type: 'active',
+      title: 'Grooth Studio',
+      description:
+        'I work on responsive web layouts and intuitive UI/UX, collaborating with the team to maintain a clear and consistent design style.',
+      role: 'Website & UI/UX Design',
+      icon: Grooth
+    },
+    {
+      type: 'active',
+      title: 'Grooth Studio',
+      description:
+        'I design and animate characters, from concept to final assets, ensuring they match the visual tone and feel of the game.',
+      role: 'Character Design & Animation',
+      icon: Grooth
+    },
+    { type: 'passive' },
+    { type: 'passive' },
+    { type: 'passive' },
+    { type: 'passive' },
+  ];
 
   return (
     <div className="w-screen overflow-x-hidden relative flex flex-col justify-center items-center">
@@ -54,26 +61,24 @@ export default function Middle() {
                 className={`custom-spotlight-card w-[400px] h-[260px] max-md:w-[350px] shrink-0 active text-[#FFF9F8]`}
                 spotlightColor="#BAD1FF"
               >
-                {(
-                  <>
-                    <div className="flex flex-row items-center mb-2">
-                      <img src={item.icon} alt="" width="70px" height="70px" />
-                      <p className="ml-3 font-montserrat font-bold text-[26px] leading-[157%] tracking-[0%] max-md:text-[20px]">
-                        {item.title}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-montserrat font-medium text-[16px] leading-[157%] tracking-[0%] w-[90%] max-md:text-[14px]">
-                        {item.description}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-montserrat font-semibold text-[12px] leading-[157%] tracking-[0%] text-right mt-[25px] max-md:text-[10px]">
-                        {item.role}
-                      </p>
-                    </div>
-                  </>
-                )}
+                <>
+                  <div className="flex flex-row items-center mb-2">
+                    <img src={item.icon} alt="" width="70px" height="70px" />
+                    <p className="ml-3 font-montserrat font-bold text-[26px] leading-[157%] tracking-[0%] max-md:text-[20px]">
+                      {item.title}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-montserrat font-medium text-[16px] leading-[157%] tracking-[0%] w-[90%] max-md:text-[14px]">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-montserrat font-semibold text-[12px] leading-[157%] tracking-[0%] text-right mt-[25px] max-md:text-[10px]">
+                      {item.role}
+                    </p>
+                  </div>
+                </>
               </SpotlightCard>
             );
           } else {
@@ -90,8 +95,9 @@ export default function Middle() {
         showGradients={false}
         enableArrowNavigation={true}
         displayScrollbar={true}
-        className='w-screen'
-      />
+        className='w-screen flex flex-col'
+        initialSelectedIndex={0}
+      />  
     </div>
   );
 }
