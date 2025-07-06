@@ -54,11 +54,7 @@ export default function Middle() {
                 className={`custom-spotlight-card ${Mobile ? 'w-[260px] h-[132px]' : 'w-[480px] h-[240px]'} shrink-0 active text-[#FFF9F8]`}
                 spotlightColor="#BAD1FF"
               >
-                {Mobile ? (
-                  <p className="text-[12px] leading-[157%] tracking-[12%]">
-                    {item.description}
-                  </p>
-                ) : (
+                {(
                   <>
                     <div className="flex flex-row items-center mb-2">
                       <img src={item.icon} alt="" width="70px" height="70px" />
