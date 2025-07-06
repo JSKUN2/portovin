@@ -80,7 +80,7 @@ export default function Middle() {
             return (
               <SpotlightCard
                 key={index}
-                className={`custom-spotlight-card w-[400px] h-[260px] shrink-0 passive`}
+                className={`custom-spotlight-card w-[400px] h-[260px] max-md:w-[350px] shrink-0 passive`}
                 spotlightColor="#BAD1FF"
               />
             );
