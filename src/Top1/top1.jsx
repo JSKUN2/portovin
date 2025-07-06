@@ -4,7 +4,6 @@ import TiltedCard from './TiltedCard';
 import foto from '../assets/img/foto.webp';
 import '../index.css';
 import './top1.css';
-
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
 };

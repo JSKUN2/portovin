@@ -3,14 +3,12 @@
 
 }
 .active{
-    background-image: 
-        url('../assets/img/texture-rotated.webp'),
-        linear-gradient(100.48deg, #D3E1FF 1.69%, #427EFF 100%);
+    background: linear-gradient(107.48deg, #5D90FD 15.05%, #8AB0FF 95.82%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     justify-content: center;
     align-items: justify;
     text-align: justify;
-    padding-top: 3px;
+    padding-top: 12px;
 }
