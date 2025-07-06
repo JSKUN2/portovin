@@ -51,7 +51,7 @@ export default function Middle() {
             return (
               <SpotlightCard
                 key={index}
-                className={`custom-spotlight-card w-[420px] h-[260px] shrink-0 active text-[#FFF9F8]`}
+                className={`custom-spotlight-card w-[400px] h-[260px] max-md:w-[350px] shrink-0 active text-[#FFF9F8]`}
                 spotlightColor="#BAD1FF"
               >
                 {(
@@ -63,12 +63,12 @@ export default function Middle() {
                       </p>
                     </div>
                     <div>
-                      <p className="font-montserrat font-medium text-[16px] leading-[157%] tracking-[0%] w-[90%]">
+                      <p className="font-montserrat font-medium text-[16px] leading-[157%] tracking-[0%] w-[90%] max-md:text-[14px]">
                         {item.description}
                       </p>
                     </div>
                     <div>
-                      <p className="font-montserrat font-semibold text-[12px] leading-[157%] tracking-[0%] text-right mt-[25px]">
+                      <p className="font-montserrat font-semibold text-[12px] leading-[157%] tracking-[0%] text-right mt-[25px] max-md:text-[10px]">
                         {item.role}
                       </p>
                     </div>
@@ -80,7 +80,7 @@ export default function Middle() {
             return (
               <SpotlightCard
                 key={index}
-                className={`custom-spotlight-card w-[420px] h-[260px] shrink-0 passive`}
+                className={`custom-spotlight-card w-[400px] h-[260px] shrink-0 passive`}
                 spotlightColor="#BAD1FF"
               />
             );
