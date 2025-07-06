@@ -51,7 +51,7 @@ export default function Middle() {
             return (
               <SpotlightCard
                 key={index}
-                className={`custom-spotlight-card ${Mobile ? 'w-[260px] h-[132px]' : 'w-[480px] h-[240px]'} shrink-0 active text-[#FFF9F8]`}
+                className={`custom-spotlight-card w-[480px] h-[240px] shrink-0 active text-[#FFF9F8]`}
                 spotlightColor="#BAD1FF"
               >
                 {(
