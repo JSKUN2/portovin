@@ -121,6 +121,7 @@ const AnimatedList = ({
           <div className="bottom-gradient" style={{ opacity: bottomGradientOpacity }}></div>
         </>
       )}
+      <p className="md:hidden text-[14px] text-[#5D90FD] text-montserrat font-semibold">Scroll Box To See More ▼</p>
     </div>
   );
 };
