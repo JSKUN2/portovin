@@ -46,8 +46,6 @@ export default function Middle() {
     },
     { type: 'passive' },
     { type: 'passive' },
-    { type: 'passive' },
-    { type: 'passive' },
   ];
 
   return (
