@@ -65,7 +65,8 @@
 
   .item-content {
     min-width: auto;
-    width: 90vw;
+    min-width: 300px;
+    height: 300px;
     margin: 0 auto;
   }
 }
