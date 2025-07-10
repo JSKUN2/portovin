@@ -135,7 +135,7 @@ export default function Carousel({
               transition={effectiveTransition}
             >
               <SpotlightCard
-                className={`custom-spotlight-card w-full h-[200px] ${
+                className={`custom-spotlight-card w-full h-[220px] ${
                   item.type === "passive" ? "passive" : "active text-[#FFF9F8]"
                 }`}
                 spotlightColor="#BAD1FF"
