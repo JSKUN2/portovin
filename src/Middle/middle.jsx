@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import AnimatedList from './AnimatedList';
-import SpotlightCard from './SpotlightCard';
 import './style.css';
 import '../index.css';
 import Grooth from '../assets/img/grooth.svg';
+import Carousel from './Carousel.jsx';
 
 const useMobile = (breakpoint = 768) => {
   const [Mobile, setMobile] = useState(window.innerWidth < breakpoint);
@@ -46,57 +45,18 @@ export default function Middle() {
     },
     { type: 'passive' },
     { type: 'passive' },
-    { type: 'passive' },
   ];
 
   return (
     <div className="w-screen overflow-x-hidden relative flex flex-col justify-center items-center">
-      <AnimatedList
-        items={spotlightItems.map((item, index) => {
-          if (item.type === 'active') {
-            return (
-              <SpotlightCard
-                key={index}
-                className={`custom-spotlight-card w-[420px] h-[260px] max-md:w-[350px] shrink-0 active text-[#FFF9F8]`}
-                spotlightColor="#BAD1FF"
-              >
-                <>
-                  <div className="flex flex-row items-center mb-2">
-                    <img src={item.icon} alt="" width="70px" height="70px" />
-                    <p className="ml-3 font-montserrat font-bold text-[26px] leading-[157%] tracking-[0%] max-md:text-[20px]">
-                      {item.title}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-montserrat font-medium text-[16px] leading-[157%] tracking-[0%] w-[90%] max-md:text-[14px]">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-montserrat font-semibold text-[12px] leading-[157%] tracking-[0%] text-right mt-[25px] max-md:text-[10px]">
-                      {item.role}
-                    </p>
-                  </div>
-                </>
-              </SpotlightCard>
-            );
-          } else {
-            return (
-              <SpotlightCard
-                key={index}
-                className={`custom-spotlight-card w-[420px] h-[260px] max-md:w-[350px] shrink-0 passive`}
-                spotlightColor="#BAD1FF"
-              />
-            );
-          }
-        })}
-        onItemSelect={(item, index) => console.log(item, index)}
-        showGradients={false}
-        enableArrowNavigation={true}
-        displayScrollbar={true}
-        className='w-screen flex flex-col'
-        initialSelectedIndex={0}
-      />  
+      <Carousel
+        items={spotlightItems}
+        baseWidth={Mobile?380:800}
+        autoplay={true}
+        pauseOnHover={true}
+        loop={true}
+        mobile={Mobile}
+      />
     </div>
   );
 }

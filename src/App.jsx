@@ -5,12 +5,6 @@ import Middle from './Middle/middle.jsx'
 import Bottom from './Bottom/bottom.jsx'
 import './index.css'
 import { motion } from 'framer-motion';
-import React, { useEffect } from 'react';
-
-useEffect(() => {
-  window.scrollTo(0, 0)
-}, [window.location.reload();])
-
 function App() {
   return (
     <motion.div
