@@ -48,7 +48,7 @@ export default function Middle() {
   ];
 
   return (
-    <div className="w-screen overflow-x-hidden relative flex flex-col justify-center items-center">
+    <div className="w-screen h-screen max-md:h-fit overflow-x-hidden relative flex flex-col justify-center max-md:justify-start items-center">
       <Carousel
         items={spotlightItems}
         baseWidth={Mobile?360:800}

@@ -64,7 +64,7 @@ export default function Bottom() {
   } = useCustomArray();
 
   return (
-    <div className="relative w-screen h-[220vh] max-md:h-[190vh] mt-[80px] bg-white flex items-center flex-col font-montserrat">
+    <div className="relative w-screen h-[220vh] max-md:h-[190vh] max-md:mt-[80px] bg-white flex items-center flex-col font-montserrat">
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
