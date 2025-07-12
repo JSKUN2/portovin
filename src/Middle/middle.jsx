@@ -3,6 +3,7 @@ import './style.css';
 import '../index.css';
 import Grooth from '../assets/img/grooth.svg';
 import Carousel from './Carousel.jsx';
+import { vw } from 'framer-motion';
 
 const useMobile = (breakpoint = 768) => {
   const [Mobile, setMobile] = useState(window.innerWidth < breakpoint);
@@ -48,10 +49,10 @@ export default function Middle() {
   ];
 
   return (
-    <div className="w-screen h-screen max-md:h-fit overflow-x-hidden relative flex flex-col justify-center max-md:justify-start items-center">
+    <div className="w-screen h-fit max-md:h-fit overflow-x-hidden relative flex flex-col justify-end max-md:justify-start items-center">
       <Carousel
         items={spotlightItems}
-        baseWidth={Mobile?360:800}
+        baseWidth={Mobile?360:(screen.width*77/100)}
         autoplay={true}
         pauseOnHover={true}
         loop={true}

@@ -30,7 +30,7 @@ const useCustomArray = () => {
       : "inline-block font-[300] text-transparent bg-clip-text bg-[linear-gradient(18deg,_#0048E5_50%,_#568BFF_100%)] font-(family-name:montserrat) text-[18px] leading-[100%] tracking-[2%] text-justify w-[80%]",
 
     classRight: isMobile
-      ? "h-[70%] w-[100%] flex justify-center items-start pt-[10px] overflow-hidden m-0"
+      ? "h-[70%] w-[100%] flex flex-row justify-center p-auto items-start pt-[10px] overflow-hidden m-0"
       : "flex-1 w-[50%] flex justify-center items-center overflow-hidden",
 
     image1: isMobile ? project3 : project1,
@@ -64,7 +64,7 @@ export default function Bottom() {
   } = useCustomArray();
 
   return (
-    <div className="relative w-screen h-[220vh] max-md:h-[190vh] max-md:mt-[80px] bg-white flex items-center flex-col font-montserrat">
+    <div className="relative w-screen h-[220vh] max-md:h-[190vh] mt-0 pt-0 max-md:mt-[80px] bg-white flex items-center flex-col justify-start font-montserrat">
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
@@ -89,7 +89,7 @@ export default function Bottom() {
               </div>
             </div>
             <div className={classRight}>
-              <img src={image1} width="94%" height="94%"/>
+              <img src={image1} width="94%" height="90%"/>
             </div>
           </div>
         </FadeContent>
@@ -107,7 +107,7 @@ export default function Bottom() {
               </div>
             </div>
             <div className={classRight}>
-              <img src={image2} width="98%" height="98%"/>
+              <img src={image2} width="94%" height="94%"/>
             </div>
           </div>
         </FadeContent>

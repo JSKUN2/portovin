@@ -1,5 +1,5 @@
 .passive{
-    background: linear-gradient(90deg, rgba(221, 224, 255, 0.5) 0%, rgba(186, 209, 255, 0.5) 90.14%);
+    background: linear-gradient(90deg, #DDE0FF 0%, #BAD1FF 90.14%);
 
 }
 .active{
@@ -10,5 +10,4 @@
     justify-content: center;
     align-items: justify;
     text-align: justify;
-    padding-top: 12px;
 }

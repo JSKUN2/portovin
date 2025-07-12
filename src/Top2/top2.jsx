@@ -7,7 +7,7 @@ const useCustomArray = () => {
   const [data, setData] = useState([
     "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[220px]",
     "text-[48px] leading-[157%] text-center w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-10 font-bold",
-    "text-[32px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold"
+    "text-[32px] leading-[175%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold"
   ]);
 
   useEffect(() => {
@@ -15,16 +15,16 @@ const useCustomArray = () => {
       const w = window.innerWidth;
       if (w < 768) {
         setData([
-            "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[130px]",
+            "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[160px]",
             "text-[28px] leading-[157%] text-left w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-2 font-bold",
-            "text-[16px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
+            "text-[16px] leading-[175%] text-left w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
 
         ]);
       } else {
         setData([
             "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[220px]",
             "text-[48px] leading-[157%] text-center w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-10 font-bold",
-            "text-[32px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
+            "text-[32px] leading-[175%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
         ]);
       }
     };
@@ -42,13 +42,13 @@ export default function Top2() {
     const [Class, Class2, Class3] = useCustomArray();
     return(
         <div className='relative w-screen flex flex-col'>
-            <div className="w-screen h-[35vh] bg-[linear-gradient(90deg,_#8EB2FF_50%,_#3776FF_100%)] flex justify-center items-center font-montserrat">
+            <div className="w-screen h-[35vh] max-md:h-[25vh] bg-linear-to-r from-blue-300 yet-blue-400 to-blue-500 flex justify-center items-center font-montserrat">
                 <ScrollVelocity
                     texts={['UI/UX DESIGNER']} 
                     velocity={70} 
-                    className={Class}                />
+                    className={Class}/>
             </div>
-            <div className="w-screen h-[65vh] max-md:h-fit bg-white flex justify-center items-center flex-col">
+            <div className="w-screen h-[100vh] max-md:h-[65vh] bg-white flex justify-center items-center flex-col">
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}

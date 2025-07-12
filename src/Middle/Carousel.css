@@ -1,7 +1,7 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  border: 1px solid #555;
+  background-color: #BED5FF;
   border-radius: 16px;
   padding: 16px;
   --outer-r: 24px;
@@ -19,9 +19,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  border: 1px solid #555;
-  border-radius: calc(var(--outer-r));
-  background-color: #0d0716;
+  border-radius: 10px;
   overflow: hidden;
   cursor: grab;
 }
@@ -77,7 +75,7 @@
   width: 40px;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #fff;
 }
 
@@ -118,31 +116,20 @@
   padding: 0 32px;
 }
 
-.carousel-indicator {
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 150ms;
-}
-
 .carousel-indicator.active {
-  background-color: #fff;
+  background-color: none;
 }
 
 .carousel-indicator.inactive {
-  background-color: #555;
+  background-color: #8DB1FF;
 }
 .carousel-indicator {
-  width: 10px;
-  height: auto;
+  height: 10px;
+  width:10px;
   border-radius: 100%; /* ini yang bikin bulat sempurna */
   background-color: #666; /* warna default (abu-abu) */
   margin: 0 4px;
   transition: all 0.3s ease;
-}
-
-.carousel-indicator.active {
-  background-color: #1d4ed8; /* warna aktif (biru indigo tailwind) */
-  transform: scale(2); /* masih proporsional */
+  cursor: pointer;
+  transition: background-color 150ms;
 }
