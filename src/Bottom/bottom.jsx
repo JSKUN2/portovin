@@ -10,7 +10,7 @@ import project4 from '../assets/img/project2_2.webp';
 const useCustomArray = () => {
   const getConfig = (isMobile) => ({
     classContainer: isMobile
-      ? "h-[560px] max-md:h-[580px] w-[90vw] bg-blue-100 flex flex-col-reverse justify-start"
+      ? "h-[560px] max-md:h-[540px] w-[80vw] bg-blue-100 flex flex-col-reverse justify-start"
       : "h-[77vh] w-[77vw] bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 border-dashed border-1 border-[#0048E5] rounded-[30px] flex flex-row",
 
     classTitle: isMobile
@@ -18,7 +18,7 @@ const useCustomArray = () => {
       : "text-[48px] leading-[157%] text-center w-[80vw] [word-spacing:0.4em] tracking-[12%] mt-40 mb-10 font-bold",
 
     classLeft: isMobile
-      ? "h-[30%] flex flex-col w-[100%] pl-[10%] justify-start"
+      ? "h-[30%] flex flex-col w-[100%] pl-[10%] justify-start align-start"
       : "flex-1 flex justify-center pl-[10%] flex flex-col w-[50%]",
 
     classH1: isMobile
