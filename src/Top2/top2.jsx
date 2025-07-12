@@ -61,7 +61,7 @@ export default function Top2() {
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
-                    baseRotation={4}
+                    baseRotation={0}
                     blurStrength={9}
                     textClassName={Class3}
                 >
