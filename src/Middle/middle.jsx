@@ -52,7 +52,7 @@ export default function Middle() {
     <div className="w-screen h-fit max-md:h-fit overflow-x-hidden relative flex flex-col justify-end max-md:justify-start items-center">
       <Carousel
         items={spotlightItems}
-        baseWidth={Mobile?360:(screen.width*77/100)}
+        baseWidth={Mobile?(screen.width*80/100):(screen.width*77/100)}
         autoplay={true}
         pauseOnHover={true}
         loop={true}
