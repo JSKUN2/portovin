@@ -149,12 +149,12 @@ export default function Carousel({
                       </p>
                     </div>
                     <div>
-                      <p className="font-montserrat font-medium text-[20px] leading-[157%] tracking-[0%] w-[90%] max-md:text-[14px]">
+                      <p className="font-montserrat font-medium text-[20px] leading-[157%] tracking-[0%] w-[100%] max-md:text-[12px] mt-[20px]">
                         {item.description}
                       </p>
                     </div>
                     <div>
-                      <p className="font-montserrat font-semibold text-[13px] leading-[157%] tracking-[0%] text-right mt-[15px] max-md:text-[10px]">
+                      <p className="font-montserrat font-semibold text-[13px] leading-[157%] tracking-[0%] text-right mt-[30px] max-md:text-[10px]">
                         {item.role}
                       </p>
                     </div>
