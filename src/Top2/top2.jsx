@@ -17,7 +17,7 @@ const useCustomArray = () => {
         setData([
             "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[130px]",
             "text-[28px] leading-[157%] text-left w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-2 font-bold",
-            "text-[24px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
+            "text-[18px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
 
         ]);
       } else {
