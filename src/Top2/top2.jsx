@@ -17,7 +17,7 @@ const useCustomArray = () => {
         setData([
             "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[130px]",
             "text-[28px] leading-[157%] text-left w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-2 font-bold",
-            "text-[13px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
+            "text-[24px] leading-[157%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold",
 
         ]);
       } else {
@@ -48,7 +48,7 @@ export default function Top2() {
                     velocity={70} 
                     className={Class}                />
             </div>
-            <div className="w-screen h-[65vh] max-md:h-[60vh] bg-white flex justify-center items-center flex-col">
+            <div className="w-screen h-[65vh] max-md:h-fit bg-white flex justify-center items-center flex-col">
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
