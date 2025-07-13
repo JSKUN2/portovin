@@ -64,7 +64,7 @@ export default function Bottom() {
   } = useCustomArray();
 
   return (
-    <div className="relative w-screen h-[220vh] max-md:h-fit pb-[40px] max-md:max-h-[140vh] mt-0 pt-0 max-md:mt-[80px] bg-white flex items-center flex-col justify-start font-montserrat">
+    <div className="relative w-screen h-[220vh] max-md:h-fit mt-0 pt-0 max-md:mt-[80px] bg-white flex items-center flex-col justify-start font-montserrat">
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
@@ -75,7 +75,7 @@ export default function Bottom() {
         Recent Project
       </ScrollReveal>
 
-      <div className="flex flex-col gap-[80px] mb-[80px]">
+      <div className="flex flex-col gap-[80px] max-md:mb-[100px]">
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
           <div className={classContainer}>
             <div className={classLeft}>
