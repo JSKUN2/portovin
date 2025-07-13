@@ -48,7 +48,7 @@ export default function Top2() {
                     velocity={70} 
                     className={Class}/>
             </div>
-            <div className="w-screen h-[100vh] max-md:h-[60vh] bg-white flex justify-center items-center flex-col max-md:mb-[80px]">
+            <div className="w-screen h-[100vh] max-md:h-[60vh] bg-white flex justify-center items-center flex-col max-md:mb-[80px] max-md:mt-[80px]">
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
