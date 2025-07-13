@@ -7,7 +7,7 @@ const useCustomArray = () => {
   const [data, setData] = useState([
     "custom-scroll-text font-inter font-extrabold leading-[100%] tracking-[2%] text-[220px]",
     "text-[48px] leading-[157%] text-center w-[80vw] [word-spacing:0.4em] tracking-[12%] mb-10 font-bold",
-    "text-[32px] leading-[175%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold"
+    "text-[32px] leading-[175%] text-justify w-[80vw] [word-spacing:0.4em] tracking-[12%] font-semibold max-md:mb-[160px]"
   ]);
 
   useEffect(() => {
