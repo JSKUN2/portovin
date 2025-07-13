@@ -75,7 +75,7 @@ export default function Bottom() {
         Recent Project
       </ScrollReveal>
 
-      <div className="flex flex-col gap-[110px]">
+      <div className="flex flex-col gap-[80px] mb-[80px]">
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
           <div className={classContainer}>
             <div className={classLeft}>
