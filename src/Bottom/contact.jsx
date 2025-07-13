@@ -45,7 +45,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="max-md:mt-[30vh] relative w-screen h-screen min-h-[100vh] bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300">
+    <div className="relative w-screen h-screen min-h-[100vh] bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300">
       <motion.div
         ref={svgContainerRef}
         style={{ height: `${height}vh` }}
