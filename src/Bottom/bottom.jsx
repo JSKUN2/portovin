@@ -23,7 +23,7 @@ const useCustomArray = () => {
 
     classH1: isMobile
       ? "inline-block text-transparent bg-clip-text bg-[linear-gradient(90deg,_#0048E5_1%,_#568BFF_30%,_#0048E5_70%)] font-[500] text-[32px] leading-[100%] tracking-[2%] text-left mb-[12px] w-[80%] h-[36px]"
-      : "inline-block font-[500] text-transparent bg-clip-text bg-[linear-gradient(90deg,_#0048E5_1%,_#568BFF_30%,_#0048E5_70%)] text-[54px] leading-[100%] tracking-[2%] text-left mb-[20px] w-[80%] h-[70px]",
+      : "inline-block font-[500] text-transparent bg-clip-text bg-[linear-gradient(90deg,_#0048E5_1%,_#568BFF_30%,_#0048E5_70%)] text-[54px] leading-[100%] tracking-[2%] text-left mb-[20px] w-[80%] h-fit",
 
     classDesc: isMobile
       ? "inline-block font-[300] text-transparent bg-clip-text bg-[linear-gradient(18deg,_#0048E5_50%,_#568BFF_100%)] font-(family-name:montserrat) text-[12px] leading-[100%] tracking-[2%] text-justify w-[94%] text-light"
