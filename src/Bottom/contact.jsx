@@ -6,7 +6,7 @@ const lerp = (start, end, amt) => (1 - amt) * start + amt * end;
 
 export default function Contact() {
   const svgContainerRef = useRef(null);
-  const [height, setHeight] = useState(30); // in vh
+  const [height, setHeight] = useState(40); // in vh
   const heightRef = useRef(30); // current height
   const targetHeightRef = useRef(30); // target height
 
@@ -19,7 +19,7 @@ export default function Contact() {
 
       const distanceFromTop = rect.top;
       const visible = Math.max(0, Math.min(1, 1 - distanceFromTop / windowHeight));
-      const maxHeight = 30; // in vh
+      const maxHeight = 40; // in vh
 
       const target = maxHeight * (1 - visible);
       targetHeightRef.current = target;
@@ -45,7 +45,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="relative w-screen min-h-[100vh] bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300">
+    <div className="max-md:mt-[30vh] relative w-screen h-screen min-h-[100vh] bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300">
       <motion.div
         ref={svgContainerRef}
         style={{ height: `${height}vh` }}
@@ -116,9 +116,8 @@ export default function Contact() {
           </defs>
         </svg>
       </motion.div>
-      <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-
-      <div className="absolute translate-x-1/3 max-md:translate-x-10 translate-y-[80%] position- w-[60vw] max-md:w-[80vw] mt-10 text-left flex flex-col m-auto">
+    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+    <div className="ml-[20%] mt-[16%] max-md:mt-[250px] max-md:ml-[10%] w-[60vw] w-[80vw] text-left flex flex-col z-10">
         <h1 className="text-[48px] max-md:text-[32px] mb-4 font-bold text-white font-montserrat">
           Contact Me!
         </h1>
@@ -126,7 +125,7 @@ export default function Contact() {
           Like what you see? Don’t hesitate to contact me...
         </p>
         <a href="mailto:glenndherrel@gmail.com">
-          <button className="bg-white rounded w-[150px] h-[60px] text-[20px] mt-6">
+          <button className="bg-white rounded w-[150px] h-[60px] text-[20px] mt-6 font-montserrat font-medium">
             Say Hello!!
           </button>
         </a>
