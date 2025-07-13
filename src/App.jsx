@@ -3,6 +3,7 @@ import Top1 from './Top1/top1.jsx'
 import Top2 from './Top2/top2.jsx'
 import Middle from './Middle/middle.jsx'
 import Bottom from './Bottom/bottom.jsx'
+import Contact from './Bottom/contact.jsx'
 import './index.css'
 import { motion } from 'framer-motion';
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Top2 />
         <Middle />
         <Bottom />
+        <Contact />
       </div>
       </motion.div>
   )
