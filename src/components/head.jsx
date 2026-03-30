@@ -1,4 +1,4 @@
-import PP from "../assets/pp.jpg"
+import PP from "../assets/pp.webp"
 import TiltedCard from './TiltedCard';
 import FadeContent from './FadeContent'
 import { useState,useEffect } from "react";
