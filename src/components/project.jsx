@@ -25,7 +25,7 @@ function Game(items, setAktif){
                         <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.game}</p>
                         </FadeContent>
                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
-                        <div className="mt-3 flex flex-row gap-[96px] max-md:gap-[38px] overflow-x-auto]">
+                        <div className="mt-3 flex flex-row gap-[96px] max-md:gap-[38px] overflow-x-auto">
                           <img src={key.gmbr1} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
                           <img src={key.gmbr2} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
                         </div></FadeContent>
