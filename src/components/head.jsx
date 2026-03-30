@@ -22,20 +22,21 @@ export default function Head({
     { label: 'Instagram', link: 'https://www.instagram.com/glenndovin' },
     { label: 'LinkedIn', link: 'https://www.linkedin.com/in/glenndovin-dherrel-junaidy-27a251349/' }
     ];
-    const [a,setA] = useState("24vw")
+    const [a, setA] = useState(window.innerWidth > 768 ? "24vw" : "64vw");
+    
     useEffect(() => {
-        const onLoad = () => {
-            if (window.innerWidth < 768){
-            setA("64vw")}
-            else{
-                setA("24vw")
-            }
+        const mediaQuery = window.matchMedia("(min-width: 769px)");
+    
+        const handleValueChange = (e) => {
+            setA(e.matches ? "24vw" : "64vw");
         };
-
-        window.addEventListener('load', onLoad);
-
-        return () => window.removeEventListener('load', onLoad);
-        }, []);
+    
+        mediaQuery.addEventListener("change", handleValueChange);
+    
+        handleValueChange(mediaQuery);
+    
+        return () => mediaQuery.removeEventListener("change", handleValueChange);
+    }, []);
     return(
         <div className="h-screen max-h:screen w-screen flex flex-col justify-center items-center pt-0 relative">
               <StaggeredMenu
