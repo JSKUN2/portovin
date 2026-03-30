@@ -1,6 +1,6 @@
-import gmbr1 from "../assets/prev3.png";
-import gmbr2 from "../assets/prev2.png";
-import gmbr3 from "../assets/prev1.png";
+import gmbr1 from "../assets/prev3.webp";
+import gmbr2 from "../assets/prev2.webp";
+import gmbr3 from "../assets/prev1.webp";
 import { useState } from "react";
 import FadeContent from "./FadeContent"
 
