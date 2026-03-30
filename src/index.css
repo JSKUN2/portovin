@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+html, body{
+  overflow-x: clip;
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url('./assets/fonts/Montserrat-Light.ttf');
@@ -9,106 +14,66 @@
   src: url('./assets/fonts/Montserrat-Regular.ttf');
   font-weight: 400;
 }
-
 @font-face {
   font-family: 'Montserrat';
   src: url('./assets/fonts/Montserrat-Medium.ttf');
   font-weight: 500;
 }
-
 @font-face {
   font-family: 'Montserrat';
   src: url('./assets/fonts/Montserrat-SemiBold.ttf');
   font-weight: 600;
 }
-
 @font-face {
   font-family: 'Montserrat';
   src: url('./assets/fonts/Montserrat-Bold.ttf');
   font-weight: 700;
 }
-
 @font-face {
   font-family: 'Montserrat';
   src: url('./assets/fonts/Montserrat-ExtraBold.ttf');
   font-weight: 800;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* FiraCode Nerd Font */
+@font-face {
+  font-family: 'FiraCode Nerd Font';
+  src: url('./assets/fonts/FiraCodeNerdFont-Light.ttf');
+  font-weight: 300;
 }
-
-::-webkit-scrollbar-thumb {
-  background-color: #427EFF;
-  border-radius: 10px;
-  border: 2px solid #568BFF;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f0f0f0;
-}
-
-:root {
-  font-family: Montserrat, system-ui, Avenir, Arial, sans-serif;
-  line-height: 1.5;
+@font-face {
+  font-family: 'FiraCode Nerd Font';
+  src: url('./assets/fonts/FiraCodeNerdFont-Regular.ttf') format('truetype');
   font-weight: 400;
-  scroll-behavior: smooth;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: white;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-a {
+@font-face {
+  font-family: 'FiraCode Nerd Font';
+  src: url('./assets/fonts/FiraCodeNerdFont-Medium.ttf');
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@font-face {
+  font-family: 'FiraCode Nerd Font';
+  src: url('./assets/fonts/FiraCodeNerdFont-Bold.ttf');
+  font-weight: 700;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+*{
+  font-family: "Montserrat","FiraCode Nerd Font";
 }
 
-button {
-  border-radius: 2px;
-  border: 1px solid transparent;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color 0.25s;
+#active{
+  font-weight: bold;
 }
-button:hover {
-  border-color: #8EB2FF;
+ba{
+  color: black;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+lo{
+  font-weight:600;
+  font-size: 48px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@media screen and (max-width:768px){
+    lo{
+      font-size: 32px;
+    }
 }
