@@ -38,7 +38,7 @@ useEffect(() => {
     return () => mediaQuery.removeEventListener("change", handleValueChange);
 }, []);
     return(
-        <div className="max-md:h-[100vh] md:h-screen w-screen flex flex-col justify-center items-center p-0 relative">
+        <div className="max-md:h-[76vh] md:h-screen w-screen flex flex-col justify-center items-center pt-0 relative">
               <StaggeredMenu
     position="right"
     items={menuItems}

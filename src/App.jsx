@@ -75,7 +75,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <div className='flex flex-col items-center relative w-full pb-20'>
+    <div className='flex flex-col items-center relative w-full'>
       <div className="fixed top-[3.5vh] z-50 flex flex-row w-[384px] bg-black h-[58px] rounded-[22px] text-white items-center justify-around px-[16px] max-md:hidden">
         <h4
           className={`ml-[16px] cursor-pointer ${active === 'head' ? 'font-bold' : ''}`}
@@ -110,7 +110,12 @@ function App() {
       </div>
 
       <div ref={projectRef}>
-        <Project/>
+        <Project
+          scrollToHead={scrollToHead}
+          scrollToBiografi={scrollToBiografi}
+          scrollToProject={scrollToProject}
+          active={active}
+        />
       </div>
     </div>
   );
