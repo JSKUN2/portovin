@@ -99,10 +99,10 @@ function Uiux(items, setAktif
 }
 
 export default function Project(
-    scrollToHead, 
+{    scrollToHead, 
   scrollToBiografi, 
   scrollToProject,
-  active
+  active}
 ) {
   const items = [
     {
@@ -157,9 +157,9 @@ export default function Project(
           <div className="flex flex-row font-semibold gap-32 max-md:gap-12 mt-32">
               <div className="flex flex-col">
                 <p className="text-[14px] font-medium color-[rgba(255, 255, 255, 0.6)] max-md:text-[10px]">Sitemap</p>
-                <a className="text-[24px] max-md:text-[20px]" onClick={scrollToHead}>Home</a>
-                <a className="text-[24px] max-md:text-[20px]" onClick={scrollToBiografi}>About Me</a>
-                <a className="text-[24px] max-md:text-[20px]" onClick={scrollToProject}>Project</a>
+                <a className="text-[24px] max-md:text-[20px] cursor-pointer" onClick={scrollToHead}>Home</a>
+                <a className="text-[24px] max-md:text-[20px] cursor-pointer" onClick={scrollToBiografi}>About Me</a>
+                <a className="text-[24px] max-md:text-[20px] cursor-pointer" onClick={scrollToProject}>Project</a>
               </div>
               <div className="flex flex-row gap-32 max-md:gap-10 max-md:flex-col">
               <div className="flex flex-col">
