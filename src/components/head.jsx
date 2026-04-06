@@ -74,7 +74,7 @@ useEffect(() => {
                           displayOverlayContent={false}
                           overlayContent={<p className="tilted-card-demo-text">Glenndovin</p>}
                         /></FadeContent>
-                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="self-center justify-self-center">
                 <div className="ml-[32px] max-md:mt-8 max-md:ml-0 flex flex-col gap-[12px] h-[100%] max-md:w-[80vw]">
                     <h1 className="font-semibold text-[44px] max-md:text-[24px]">I'm Glenndovin Dherrel Junaidy,</h1>
                     <div className="w-[32vw] bg-black h-fit pt-2 pb-2 font-semibold text-[24px] text-white text-center justify-center max-md:text-[4vw] flex flex-col max-md:w-[100%]">Game Developer & UI/UX Designer</div>
