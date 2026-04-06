@@ -81,7 +81,7 @@ useEffect(() => {
                     <p className="font-semibold text-[24px] text-black/40 leading-[32px] w-[40vw] max-md:w-[100%] max-md:text-[14px]">Creating stylized game worlds, characters, and intuitive digital experiences.</p>
                 </div></FadeContent>
             </div>
-                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="flex flex-row w-[90%] h-[64px] absolute bottom-0 justify-between">
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="flex flex-row w-[90%] h-[64px] absolute bottom-5 justify-between">
                     <div className="text-[24px] font-semibold leading-[44px] flex flex-row gap-[20px] justify-center items-center text-center"><div className="text-[48px] max-md:text-[28px]"></div> <div className="mt-1 max-md:text-[16px]">Indonesia</div></div><div className="font-medium text-[16px] flex flex-col max-md:text-[16px] max-md:mt-2.5"><a href="https://www.instagram.com/glenndovin" className=" max-md:text-[14px]">Instagram</a><a href="https://www.linkedin.com/in/glenndovin-dherrel-junaidy-27a251349/" className="max-md:text-[14px]">Linkedin</a></div></FadeContent></div>
     )
 }
