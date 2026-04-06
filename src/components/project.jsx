@@ -3,47 +3,54 @@ import gmbr2 from "../assets/prev2.webp";
 import gmbr3 from "../assets/prev1.webp";
 import { useState } from "react";
 import FadeContent from "./FadeContent"
-
+import gmbr4 from "../assets/movieapp1.webp"
+import gmbr5 from "../assets/movieapp2.webp"
+import gmbr6 from "../assets/movieapp3.webp"
+import gmbr7 from "../assets/jobapp1.webp"
+import gmbr8 from "../assets/jobapp2.webp"
+import gmbr9 from "../assets/jobapp3.webp"
 function Game(items, setAktif
 ){
         return(
           <div>
-            <div className="mt-6 mb-5 flex flex-row gap-15 max-md:gap-5">
+            <div className="mt-6 mb-5 max-md:mb-0 flex flex-row gap-15 max-md:gap-5">
               <div className="h-[30px] bg-black text-white font-semibold text-[24px] flex flex-col justify-center align-center text-center p-8 rounded-[80px] cursor-pointer max-md:text-[12px] max-md:p-4">Game Development</div>
               <div onClick={() => setAktif("uiux")} className="flex flex-col justify-center align-center rounded-[80px] text-center h-[30px] p-8 text-black/40 font-semibold text-[24px] cursor-pointer hover:bg-black/40 hover:text-white max-md:text-[12px] max-md:p-4">UI/UX</div>
             </div>
             {items.map((key,idx) => {
               return(
-                  <div className="flex flex-row w-[100%]">
+                  <div className="flex flex-row w-[100%] pt-10 max-md:pt-0">
                      <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="w-[10%]">
                     <h1 className="font-semibold text-[96px] max-md:text-[38px] max-md:pt-4">{idx+1}</h1></FadeContent>
                     <div className="w-[90%] flex flex-col gap-6">
-                      <div className="pt-5 font-semibold">
+                      <div className="pt-5 font-semibold flex flex-col gap-16">
                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <lo>
                           {key.name}
                         </lo>
                         <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.game}</p>
-                        </FadeContent>
+                        </FadeContent>                                              <div className="pt-15 max-md:pt-0 font-semibold">
+
                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <div className="mt-3 flex flex-row gap-[96px] max-md:gap-[38px] overflow-x-auto">
                           <img src={key.gmbr1} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
                           <img src={key.gmbr2} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
-                        </div></FadeContent>
-                      <div className="pt-5 font-semibold">
+                        </div></FadeContent></div>
+                      <div className="pt-10 max-md:pt-0 font-semibold">
                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <lo>
                           Concept
                         </lo>
                         <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.Concept}</p>
-                        </FadeContent>
+                        </FadeContent>                                              <div className="pt-15 max-md:pt-10 font-semibold">
+
                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <div className="mt-3 flex flex-row gap-[96px] w-[100%] justify-center">
                           <img src={key.gmbr3} alt="" className="w-[1024px] h-full"/>
-                        </div></FadeContent>
+                        </div></FadeContent></div>
                       </div>
                       </div>
-                      <div className="pt-5 font-semibold">
+                      <div className="pt-10 font-semibold">
                       <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
 
                         <lo>
@@ -51,13 +58,13 @@ function Game(items, setAktif
                         </lo>
                         <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.Development}</p></FadeContent>
                       </div>
-                      <div className="pt-5 font-semibold"><FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                      <div className="pt-10 font-semibold"><FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <lo>
                           Result
                         </lo>
                         <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.Result}</p></FadeContent>
                       </div>
-                      <div className="pt-5 font-semibold"><FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                      <div className="pt-10 font-semibold"><FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <lo>
                           Technical
                         </lo>
@@ -76,7 +83,7 @@ function Game(items, setAktif
                           </li>
                         </ul></FadeContent>
                       </div>
-                      <div className="pt-5 font-semibold"><FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                      <div className="pt-10 font-semibold"><FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
                         <lo>
                           Learning
                         </lo>
@@ -87,14 +94,47 @@ function Game(items, setAktif
               )
               })}</div>)
 }
-function Uiux(items, setAktif
+function Uiux(items2, setAktif
 ){
         return(
           <div>
-            <div className="mt-6 mb-5 flex flex-row gap-15">
-              <div onClick={() => setAktif("game")}  className="flex flex-col justify-center align-center text-center h-[30px] p-8 text-black/40 font-semibold text-[24px] cursor-pointer hover:bg-black/40 hover:text-white rounded-[80px]">Game Development</div>
-              <div className="h-[30px] bg-black text-white font-semibold text-[24px] flex flex-col justify-center align-center text-center p-8 rounded-[80px] cursor-pointer">UI/UX</div>
+            <div className="mt-6 mb-5 max-md:mb-0 flex flex-row gap-15 max-md:gap-5">
+              <div onClick={() => setAktif("game")}  className="flex flex-col justify-center align-center text-center h-[30px] p-8 text-black/40 font-semibold text-[24px] cursor-pointer hover:bg-black/40 hover:text-white rounded-[80px] max-md:text-[12px] max-md:p-4">Game Development</div>
+              <div className="h-[30px] bg-black text-white font-semibold text-[24px] flex flex-col justify-center align-center text-center p-8 rounded-[80px] cursor-pointer max-md:text-[12px] max-md:p-4">UI/UX</div>
             </div>
+            {items2.map((key,idx) => {
+              return(
+                  <div className="flex flex-row w-[100%] pt-10 max-md:pt-0">
+                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="w-[10%]">
+                    <h1 className="font-semibold text-[96px] max-md:text-[38px] max-md:pt-4">{idx+1}</h1></FadeContent>
+                    <div className="w-[90%] flex flex-col gap-6">
+                      <div className="pt-5 font-semibold">
+                        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                        <lo>
+                          {key.name}
+                        </lo>
+                        <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.description}</p>
+                        </FadeContent>
+                                              <div className="pt-15 max-md:pt-10 font-semibold">
+
+                                                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                        <div className="mt-3 flex flex-row gap-[96px] max-md:gap-[38px] overflow-x-auto">
+                          <img src={key.gmbr1} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
+                          <img src={key.gmbr2} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
+                          <img src={key.gmbr3} alt="" className="w-[640px] h-full max-md:w-[240px]"/>
+                        </div>                  </FadeContent></div>
+</div>
+                                              <div className="pt-10 font-semibold">
+                                                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} >
+                        <lo>
+                          Experience Flow
+                        </lo>
+                        <p className="text-black/40 text-[26px] leading-[44px] max-md:text-[18px] max-md:leading-[32px]">{key.experience}</p>
+                        </FadeContent>
+                        </div></div>
+                        </div>
+              )
+            })}
             </div>)
 }
 
@@ -128,6 +168,23 @@ export default function Project(
         "This being my first game project, I learned the fundamentals of character animation and how to translate visual concepts into a playable experience.",
     },
   ];
+  const items2 = [{
+    name:"Movie App",
+    description:"This concept focuses on creating an enjoyable and effortless way for users to explore and manage movies.",
+    gmbr1:gmbr4,
+    gmbr2:gmbr5,
+    gmbr3:gmbr6,
+    experience:"The preview showcases the main user journey, from discovering popular movies on the homepage to accessing detailed information such as synopsis, cast, and similar recommendations."
+
+  },{
+    name:"Job App",
+    description:"A digital service marketplace that connects users with freelancers and professionals offering various skills.",
+    gmbr1:gmbr7,
+    gmbr2:gmbr8,
+    gmbr3:gmbr9,
+    experience:"The preview showcases the main user journey, from discovering popular movies on the homepage to accessing detailed information such as synopsis, cast, and similar recommendations."
+
+  }]
   const [aktif, setAktif] = useState("game")
   return (
                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="w-[10%] m-0 p-0">
@@ -138,9 +195,9 @@ export default function Project(
         <hr className="border-2"/>
     </div>
       <div className="flex flex-col gap-6 font-sans text-black">
-      {aktif == "game" ? Game(items, setAktif) : Uiux(items, setAktif)}</div>
+      {aktif == "game" ? Game(items, setAktif) : Uiux(items2, setAktif)}</div>
     </div>
-    <div className="w-screen h-screen max-md:h-[80vh] bg-black m-0 mt-[5vw] flex flex-col justify-between text-white pt-16">
+    <div className="w-screen h-screen max-md:h-[80vh] bg-black m-0 mt-15 flex flex-col justify-between text-white pt-16">
       <div className="flex flex-row font-semibold text-[18px] max-md:text-[14px] justify-between">
           <div className="ml-[5vw] h-30 max-md:max-h-fit">
             <p className="bg-white text-black p-0.5 w-50 max-md:w-35">Game</p>
