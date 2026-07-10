@@ -64,6 +64,7 @@ export default function Anggota() {
     glenn,
     boltbert,
     gabriel,
+    joseph,
     timothy,
     raz,
   ];
