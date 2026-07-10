@@ -34,8 +34,8 @@ export default function Game() {
 return (
     <Part nama1="Our Games" nama2="ゲーム一覧">
       {a.map((anggota, index) => (
-        <div key={anggota.nama} className="flex flex-col max-md:flex-col-reverse">
-          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+        <div key={anggota.nama}>
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="flex flex-col max-md:flex-col-reverse">
             
             {/* --- TAMPILAN DESKTOP (Kondisi Normal Sebelumnya) --- */}
             <div className="max-md:hidden">
@@ -93,10 +93,8 @@ return (
               <p className="text-[2.8vw] text-white/60">{anggota.desk2}</p>
             </div>
 
-          </FadeContent>
-
           {/* Screenshot Section (Tetap tampil di keduanya) */}
-          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+          <div>
               <div className="flex flex-row items-center mb-5 md:hidden">
                 <img src={anggota.logo} alt="" className="w-[16vw] h-[16vw] rounded-[16px]" />
                 <div className="ml-3">
@@ -112,6 +110,7 @@ return (
             <div className="flex justify-end p-10 max-md:hidden">
               <a href={anggota.link} target="_blank"><button className="w-[16vw] h-[3vw] bg-white rounded-full">Download</button></a>
             </div>
+          </div>
           </FadeContent>
         </div>
       ))}
