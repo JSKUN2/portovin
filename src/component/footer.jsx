@@ -10,7 +10,7 @@ export default function Footer({
   const itemClass =
     "group cursor-pointer transition-all duration-300 hover:opacity-70";
   return (
-    <footer className="w-full bg-[#0f0f0f] h-full mt-20 px-14 max-md:px-5 py-14 max-md:pb-4 max-md:pt-7 text-white font-light relative">
+    <footer className="w-full bg-[#0f0f0f] h-screen mt-20 px-14 max-md:px-5 py-14 max-md:pb-4 max-md:pt-7 text-white font-light relative">
       <div className="flex flex-col">
         <div className="flex flex-row items-start max-md:flex-col">
           <div className="flex flex-row w-[50vw] max-md:w-full">
