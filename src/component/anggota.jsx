@@ -14,8 +14,8 @@ export default function Anggota() {
   };
   const boltbert = {
     nama: "Boltbert",
-    jabatan: "Unity Developer  ",
-    jabatan2: "Unity 開発者",
+    jabatan: "Game Developer  ",
+    jabatan2: "ゲーム開発者",
     keterangan:
       "Boltbert brings the game to life—literally. As the Unity developer, he transforms design and code into an interactive experience that players can touch, see, and feel. He crafts the gameplay mechanics, visual effects, and player controls that define how the world behaves and responds. His expertise turns ideas into a fully playable reality.",
     link: "https://boltbert.grooths.com/",
