@@ -86,7 +86,7 @@ export default function Anggota() {
   }, []);
   const members = isMobile ? mobileMembers : desktopMembers;
   return (
-    <Part nama1="Our Members" nama2="私たちのメンバー">
+    <Part nama1="Our Members" nama2="メンバー">
       <div className="columns-2 gap-8 w-full mb-20 max-md:columns-1">
         {members.map((anggota, index) => (
           <div

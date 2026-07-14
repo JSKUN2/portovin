@@ -79,7 +79,14 @@ export default function App() {
         scrollFaq={() => scrollToSection(faqRef, "faq")}
       />
       {}
-      <div className="fixed top-0 left-0 z-20 hidden md:flex w-full items-center justify-center gap-20 py-3 text-[17px] font-light text-white backdrop-blur-md">
+      <div className="fixed top-2.5 left-14 z-30 max-md:hidden">
+            <img
+              src="/grooth.png"
+              alt="Grooth Studio"
+              className="w-[37.55px] h-[34px] max-md:w-[28.55px] max-md:h-[25px]"
+            />
+        </div>
+      <div className="fixed top-0 left-0 z-20 hidden md:flex w-full items-center justify-center gap-20 py-5 text-[17px] font-light text-white backdrop-blur-md">
         <h1
           className={`cursor-pointer transition ${
             active === "home"

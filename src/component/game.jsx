@@ -88,9 +88,9 @@ return (
               <img src={anggota.gmbr1} className="w-[46vw] max-md:w-[62vw] h-auto" />
               <img src={anggota.gmbr2} className="w-[46vw] max-md:w-[62vw] h-auto" />
             </div>
-              <h2 className="text-white/80 text-[4vw] mb-4 mt-8 border-b pb-2">About this game</h2>
-              <p className="text-[3.2vw] text-white/80 mb-2">{anggota.desk1}</p>
-              <p className="text-[2.8vw] text-white/60">{anggota.desk2}</p>
+              <h2 className="text-white/80 text-[6vw] mb-4 mt-8 border-b pb-2">About this game</h2>
+              <p className="text-[4vw] text-white/80 mb-2">{anggota.desk1}</p>
+              <p className="text-[3.2vw] text-white/60">{anggota.desk2}</p>
             </div>
 
           {/* Screenshot Section (Tetap tampil di keduanya) */}
@@ -99,7 +99,7 @@ return (
                 <img src={anggota.logo} alt="" className="w-[16vw] h-[16vw] rounded-[16px]" />
                 <div className="ml-3">
                   <h1 className="text-[4.4vw] text-white">{anggota.nama}</h1>
-                  <h1 className="text-[2.4vw] text-white/60">Developed by Grooth Studio</h1>
+                  <h1 className="text-[3.2vw] text-white/60">Developed by Grooth Studio</h1>
                 </div>
               </div>
               <a href={anggota.link} className="block mt-5 md:hidden">

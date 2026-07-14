@@ -37,8 +37,8 @@ export default function Head({scrollToAnggota}){
         <hr className='border-white border-1' />
         <div className='flex flex-row justify-between mt-5.5'>
           <div className='flex flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:w-[100vw]'>
-            <p className='font-light text-[1.5vw] text-white max-md:text-[3.4vw] max-md:w-[70vw]'>Started as a passion project, now building the worlds we always wanted</p>
-            <p class="jepun" className='font-light text-[1.1vw] text-white/60 max-md:text-[2.6vw]'>情熱から始まり、ずっと遊びたかった世界を創り続ける。</p>
+            <p className='font-light text-[1.5vw] text-white max-md:text-[4vw] max-md:w-[76vw]'>Started as a passion project, now building the worlds we always wanted</p>
+            <p class="jepun" className='font-light text-[1.1vw] text-white/60 max-md:text-[3.2vw]'>情熱から始まり、ずっと遊びたかった世界を創り続ける。</p>
             <button className='font-light w-[12vw] h-[3vw] max-md:h-[9vw] max-md:w-[35vw] bg-white mt-10 max-md:mt-3 cursor-pointer text-[1.1vw] max-md:text-[3vw]' onClick={scrollToAnggota}>Meet The Team</button>
           </div>
           <div className='inline-grid grid-cols-2 font-light gap-x-0 text-center items-center gap-y-0 max-md:hidden'>
