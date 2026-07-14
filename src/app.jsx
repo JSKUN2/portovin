@@ -79,7 +79,7 @@ export default function App() {
         scrollFaq={() => scrollToSection(faqRef, "faq")}
       />
       {}
-      <div className="fixed top-2.5 left-14 z-30 max-md:hidden">
+      <div className="absolute top-2.5 left-14 z-30 max-md:hidden">
             <img
               src="/grooth.png"
               alt="Grooth Studio"
