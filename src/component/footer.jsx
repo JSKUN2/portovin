@@ -17,7 +17,7 @@ export default function Footer({
             <img
               src="/grooth.png"
               alt="Grooth Studio"
-              className="w-[37.55px] h-[34px] max-md:w-[28.55px] max-md:h-[25px]"
+              className="w-[37.55px] h-[34px] max-md:w-[28.55px] max-md:h-[25px] z-30"
             />
             <h1 className="ml-2 font-[650] leading-9 max-md:text-[12px] max-md:leading-7">
               Grooth Studio
