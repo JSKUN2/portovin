@@ -1,6 +1,5 @@
 import Part from "./part";
 import FadeContent from "../animasi/FadeContent";
-
 export default function Game() {
   const a = [
     {
@@ -30,14 +29,11 @@ export default function Game() {
       link: "https://play.google.com/store/apps/details?id=com.groothstudio.BladeableEscapeTheUniverse",
     },
   ];
-
 return (
     <Part nama1="Our Games" nama2="ゲーム一覧">
       {a.map((anggota, index) => (
         <div key={anggota.nama}>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="flex flex-col max-md:flex-col-reverse">
-            
-            {/* --- TAMPILAN DESKTOP (Kondisi Normal Sebelumnya) --- */}
             <div className="max-md:hidden">
               <div className="flex flex-row justify-between mt-5.5">
                 <div className="flex flex-row">
@@ -61,15 +57,12 @@ return (
                   </div>
                 </div>
               </div>
-
               <div className="mt-10 mb-10 w-full bg-[#272727] p-8 rounded-[24px] md:rounded-[0]">
                 <h2 className="text-white text-[1.5vw] font-medium mb-4 md:hidden">About this game</h2>
                 <p className="font-light text-[1.3vw] text-white mb-2">{anggota.desk1}</p>
                 <p className="jepun font-light text-[1.11vw] text-white/60">{anggota.desk2}</p>
               </div>
             </div>
-
-            {/* --- TAMPILAN MOBILE (Card Gabung) --- */}
             <div className="md:hidden bg-[#0F0F0F] rounded-[18px] p-5 mb-10 mt-5">
               <div className="flex justify-around px-4 pb-4 mb-4 font-light">
                 <div className="text-center">
@@ -92,8 +85,6 @@ return (
               <p className="text-[4vw] text-white/80 mb-2">{anggota.desk1}</p>
               <p className="text-[3.2vw] text-white/60">{anggota.desk2}</p>
             </div>
-
-          {/* Screenshot Section (Tetap tampil di keduanya) */}
           <div>
               <div className="flex flex-row items-center mb-5 md:hidden">
                 <img src={anggota.logo} alt="" className="w-[16vw] h-[16vw] rounded-[16px]" />
@@ -105,8 +96,6 @@ return (
               <a href={anggota.link} className="block mt-5 md:hidden">
                 <button className="w-full py-1.5 bg-white text-black rounded-full font-medium text-[3.2vw]">Download</button>
               </a>
-            
-            {/* Tombol download desktop */}
             <div className="flex justify-end p-10 max-md:hidden">
               <a href={anggota.link} target="_blank"><button className="w-[16vw] h-[3vw] bg-white rounded-full">Download</button></a>
             </div>
