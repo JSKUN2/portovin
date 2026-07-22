@@ -9,6 +9,7 @@ import Anggota from "./component/anggota";
 import Faq from "./component/faq";
 import Supporter from "./component/supporter";
 import Footer from "./component/footer";
+import CustomScrollbar from "./component/CustomScrollbar";
 export default function App() {
   const headRef = useRef(null);
   const deskripsiRef = useRef(null);
@@ -60,9 +61,9 @@ export default function App() {
     });
     return () => observer.disconnect();
   }, []);
-  return (
-    <div className="relative w-screen bg-black overflow-hidden flex flex-col">
-      {}
+return (
+    <div className="relative w-full min-h-screen bg-black flex flex-col">
+      <CustomScrollbar />      
       <StaggeredMenu
         active={active}
         isFixed={true}
@@ -78,20 +79,19 @@ export default function App() {
         scrollTeam={() => scrollToSection(anggotaRef, "anggota")}
         scrollFaq={() => scrollToSection(faqRef, "faq")}
       />
-      {}
+
       <div className="absolute top-2.5 left-14 z-30 max-md:hidden">
-            <img
-              src="/grooth.png"
-              alt="Grooth Studio"
-              className="w-[37.55px] h-[34px] max-md:w-[28.55px] max-md:h-[25px]"
-            />
-        </div>
-      <div className="fixed top-0 left-0 z-20 hidden md:flex w-full items-center justify-center gap-20 py-5 text-[17px] font-light text-white backdrop-blur-md">
+        <img
+          src="/grooth.png"
+          alt="Grooth Studio"
+          className="w-[37.55px] h-[34px] max-md:w-[28.55px] max-md:h-[25px]"
+        />
+      </div>
+
+      <div className="fixed top-0 left-0 z-20 hidden md:flex w-full items-center justify-center gap-20 py-5 text-[17px] font-light text-white backdrop-blur-md bg-black/80">
         <h1
           className={`cursor-pointer transition ${
-            active === "home"
-              ? "font-medium"
-              : "font-light opacity-70"
+            active === "home" ? "font-medium" : "font-light opacity-70"
           }`}
           onClick={() => scrollToSection(headRef, "home")}
         >
@@ -99,34 +99,28 @@ export default function App() {
         </h1>
         <h1
           className={`cursor-pointer transition ${
-            active === "news"
-              ? "font-medium"
-              : "font-light opacity-70"
+            active === "news" ? "font-medium" : "font-light opacity-70"
           }`}
           onClick={() => scrollToSection(newsRef, "news")}
         >
-          Services
+          News
         </h1>
         <h1
           className={`cursor-pointer transition ${
-            active === "faq"
-              ? "font-medium"
-              : "font-light opacity-70"
+            active === "faq" ? "font-medium" : "font-light opacity-70"
           }`}
           onClick={() => scrollToSection(faqRef, "faq")}
         >
           FAQ
         </h1>
       </div>
-      {}
+
       <div ref={headRef} className="px-5 max-md:px-0">
         <Head
-          scrollToAnggota={() =>
-            scrollToSection(anggotaRef, "anggota")
-          }
+          scrollToAnggota={() => scrollToSection(anggotaRef, "anggota")}
         />
       </div>
-      <main className="px-5 max-md:px-0">
+      <main className="px-5 max-md:px-0 flex-grow">
         <div ref={deskripsiRef}>
           <Deskrispi />
         </div>
@@ -144,7 +138,7 @@ export default function App() {
         </div>
         <Supporter />
       </main>
-      {}
+
       <Footer
         scrollHome={() => scrollToSection(headRef, "home")}
         scrollAbout={() => scrollToSection(deskripsiRef, "about")}

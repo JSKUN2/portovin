@@ -7,16 +7,6 @@ export default function StaggeredMenu({
   position = "right",
   colors = ["#B19EEF", "#5227FF"],
 
-  socialItems = [
-    {
-      label: "Instagram",
-      link: "https://www.instagram.com/grooth_studio/",
-    },
-    {
-      label: "Email",
-      link: "mailto:studiogrooth@gmail.com",
-    },
-  ],
 
   displaySocials = true,
   displayItemNumbering = true,
@@ -27,7 +17,7 @@ menuButtonBackground = "rgba(255,255,255,.50)",
 openMenuButtonBackground = "#0f0f0f",
 
 menuIconColor = "#0f0f0f",
-openMenuIconColor = "#ffffff",
+openMenuIconColor = "#FFFFFFDD",
 
   accentColor = "#5227FF",
 
@@ -374,7 +364,7 @@ const animateColor = useCallback(
     },
     {
       id: "news",
-      label: "Services",
+      label: "News",
       jp: "ニュース",
       action: scrollServices,
     },
@@ -445,7 +435,7 @@ const animateColor = useCallback(
 >
   <line
     ref={topRef}
-    x1="12"
+    x1="16"
     y1="2"
     x2="34"
     y2="2"
@@ -467,7 +457,7 @@ const animateColor = useCallback(
 
   <line
     ref={bottomRef}
-    x1="20"
+    x1="10"
     y1="23"
     x2="34"
     y2="23"

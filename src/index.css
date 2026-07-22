@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
+html {
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url('../public/font/Montserrat-Light.ttf');
@@ -42,5 +49,5 @@
 html, body{
   background-color: black;
   font-family: "Montserrat";
-  font-weight: light;
+  font-weight: 300;
 }
